@@ -1,0 +1,50 @@
+.toolbar
+    padding: 30px 0
+
+    @media (max-width: 992px)
+        background: #f2f4f7
+        box-shadow: 200px 0 0 #f2f4f7, -200px 0 0 #f2f4f7
+
+    .amount, .limiter
+        display: none
+
+    .sorter
+        &:before
+            min-width: 105px
+            color: color1_bg
+            content: 'Ordenar por'
+            text-transform: uppercase
+            font-weight: medium
+            font-size: 13px
+
+    .sort-by
+        position: relative
+        width: 100%
+        height: 40px
+        border-radius: 40px
+        background: #fff
+
+        &:after
+            icon('\f054')
+
+            position: absolute
+            top: 50%
+            right: 20px
+            color: #d7d7d7
+            font-size: 10px
+            transform: translateY(-50%) rotate(90deg)
+
+        label
+            display: none
+
+        select
+            padding: 0 25px
+            width: 100%
+            height: 100%
+            border: 0
+            background: none
+            box-shadow: none
+            color: color1_bg
+            text-transform: uppercase
+            font-size: 11px
+            appearance: none

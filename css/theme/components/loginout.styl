@@ -1,0 +1,33 @@
+.loginout
+    @media (max-width: 992px)
+        order: 1
+
+        .attendance
+            display: none
+
+        .account
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 48px
+            height: 48px
+            font-size: 0
+
+            &:before
+                icon('\f007')
+
+                font-size: 18px
+
+    @media (min-width: 993px)
+        .header &
+            display: flex
+            flex: 0 1 320px
+            justify-content: flex-start
+            align-items: center
+            margin-left: 0
+
+        a
+            display: inline-block
+            padding: 15px 30px
+            color: color1_bg_hover
+            font-size: 12px

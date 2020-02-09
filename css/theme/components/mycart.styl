@@ -1,0 +1,43 @@
+.mycart
+    &__header
+        .ico
+            width: 22px
+            height: 19px
+
+        width: 42px
+        height: 42px
+
+        a
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            width: 100%
+            height: 100%
+
+            &:hover
+                color: color1_bg
+
+        .qtd
+            position: absolute
+            top: 0
+            right: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 18px
+            height: 18px
+            border-radius: 50%
+            background: #c1c1c1
+            font-size: 10px
+
+    &:hover
+        .mycart
+            &__header
+                background: #fff
+                color: color1_bg
+
+            &__content
+                display: none !important
+
+    @media (max-width: 992px)
+        order: 2

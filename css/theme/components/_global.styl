@@ -12,6 +12,9 @@
 body
     font-family: font
 
+html, body, .wrapper-container, .wrapper
+    min-height: 100%
+
 .wrapper-container
     overflow: visible
 
@@ -28,8 +31,8 @@ body
 .messages
     > li
         display: block
-        padding: 10px 20px
         margin-bottom: 20px
+        padding: 10px 20px
         font-size: 14px
 
     .success-msg
@@ -48,8 +51,24 @@ body
         color: #f7be07
 
 // Container
-.header, .main-container, .footer
+.header, .main, .footer
     @extend $container
 
 .categories .ul--0
     max-width: viewport
+
+.main-container
+    min-height: 0
+
+.wrapper
+    display: flex
+    flex-flow: column nowrap
+
+    svg, .btn .ico, button .ico
+        fill: currentColor
+
+        path
+            fill: currentColor
+
+.footer-container
+    margin-top: auto

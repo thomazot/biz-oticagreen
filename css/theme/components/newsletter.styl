@@ -1,0 +1,65 @@
+.newsletter
+    margin: 0 auto
+    padding: 30px 0
+    max-width: calc(100% - 32px)
+    width: viewport
+
+    &__text
+        display: flex
+        align-items: center
+        color: color1_bg
+        font-weight: bold
+        font-size: 14px
+
+        .ico
+            margin-right: 15px
+            width: 60px
+            height: 30px
+            color: #c1c1c1
+
+    input.input-text
+        padding: 0
+        height: 25px
+        border: 0
+        border-bottom: solid 1px #ecf1f5
+        box-shadow: none
+        font-weight: regular
+        font-size: 12px
+
+        &::placeholder
+            color: #bcbdbd
+
+    &__btn
+        display: flex
+        justify-content: center
+        align-items: centert
+        padding: 0
+        height: 40px
+        border-radius: 40px
+        background: #b7e529
+        box-shadow: none
+        letter-spacing: 1px
+        font-weight: bold
+        font-size: 12px
+
+        &:hover
+            background: darken(#b7e529, 20%)
+
+    &__submit
+        flex: 0 1 140px
+
+    @media (min-width: 993px)
+        &__form
+            flex-wrap: nowrap
+
+        &__text
+            flex: 0 1 680px
+            margin-bottom: 0
+
+        &__email
+            padding-bottom: 0
+
+        &__submit
+            position: relative
+            z-index: 2
+            margin-left: -20px

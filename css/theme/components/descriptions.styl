@@ -1,0 +1,104 @@
+.std .descriptions
+    &__white
+        background: #fff
+
+    &__bg
+        background: url(product) repeat center center
+
+    &__white, &__bg
+        padding: 60px 20px
+
+    &__title
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin: 0
+        padding: 15px 0
+        color: color1_bg
+        text-transform: none
+        font-weight: bold
+        font-size: 26px
+        line-height: 40px
+
+        img
+            margin-right: 10px
+            margin-bottom: 0
+
+            + span
+                line-height: 30px
+
+    &__text
+        color: color1_bg
+        font-weight: regular
+        font-size: 18px
+        line-height: 40px
+
+        &--big
+            font-weight: medium
+            font-size: 24px
+            line-height: 38px
+
+        &--medium
+            line-height: 35px
+
+    &__list
+        li
+            margin-bottom: 15px
+            list-style: none
+            font-weight: medium
+            font-size: 16px
+
+            &:before
+                display: inline-block
+                margin-top: -3px
+                margin-right: 8px
+                width: 6px
+                height: 6px
+                border-radius: 50%
+                background: #cacfd8
+                content: ''
+                vertical-align: middle
+
+    &__head
+        text-transform: none
+        font-weight: bold
+        font-size: 18px
+
+    &__main
+        font-weight: regular
+        font-size: 18px
+
+    &__table
+        margin-top: 30px
+
+    @media (min-width: 569px)
+        margin-right: -16px
+        margin-left: -16px
+
+        &__table
+            display: flex
+
+        &__head
+            flex: 0 1 190px
+
+    @media (min-width: 993px)
+        &__container:not(.descriptions__container--no-flex)
+            @extend $container
+
+            display: flex
+            align-items: center
+
+            > div, > ul
+                flex: 0 1 50%
+
+                &:first-child
+                    margin-right: 40px
+
+                &:last-child
+                    margin-left: 40px
+
+        &__container--no-flex
+            @extend $container
+
+        &__image
+            min-width: 52%

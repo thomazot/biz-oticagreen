@@ -1,3 +1,12 @@
+.categories
+    &__show
+        background: #fff
+        color: color1_bg
+
+        &:hover
+            background: #fff
+            color: color1_bg
+
 @media (max-width: 992px)
     .categories
         .parent
@@ -11,12 +20,13 @@
 
             > a
                 display: flex
-                min-height: 48px
                 justify-content: flex-start
                 align-items: center
+                min-height: 48px
 
             &:after
                 icon('\f054')
+
                 position: absolute
                 top: 0
                 right: 0
@@ -26,9 +36,10 @@
                 align-items: center
                 width: 48px
                 height: 48px
+                background: none
+                color: #fff
                 font-size: 20px
-                background: rgba(255, 255, 255, 0.1)
-                transition: all 0.2s ease
+                transition: all .2s ease
 
             &.on
                 &:after
@@ -40,6 +51,71 @@
         .all-li--0
             padding-bottom: 0
 
+        .all-a--1
+            img
+                display: none
+
 @media (min-width: 993px)
     .categories
         margin-bottom: 0 !important
+        background: #fff
+        box-shadow: 800px 0 0 #fff, -800px 0 0 #fff
+        transition: all .2s linear
+
+        .scrolling--down:not(.scrolling--up) &
+            transform: translateY(-50px)
+
+        a
+            img
+                max-height: none
+
+                + span
+                    display: none
+
+        &__all
+            display: none
+
+        &--justify
+            .ul
+                &--0
+                    justify-content: center
+
+                &--1
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    max-width: none
+                    width: 100%
+
+            .li--0
+                flex: 0 0 auto
+                min-width: 0
+
+            .a--1
+                padding: 0
+
+                &:hover
+                    background: none
+                    box-shadow: none
+
+        .a--0
+            margin: 0 0 10px
+            height: 30px
+            color: color2_bg_hover
+            font-weight: medium
+            font-size: 14px
+
+        .li--0
+            position: static
+
+            &:hover
+                .a--0
+                    border-radius: 30px
+                    background: #f2f3f6
+                    color: color1_bg
+
+        .box--1
+            padding: 30px 0 0
+            width: 100%
+            background: rgba(255, 255, 255, .3)
+            box-shadow: none

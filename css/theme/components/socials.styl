@@ -1,0 +1,24 @@
+.socials
+    .footer &
+        &__list, &__name
+            display: block
+
+        &__link
+            display: flex
+            align-items: center
+
+        &__name
+            color: #fff
+            font-weight: medium
+            font-size: 16px
+
+            &:before
+                content: '/'
+
+        &__img
+            margin-right: 15px
+            max-width: 40px
+
+        @media (max-width: 992px)
+            &__link
+                justify-content: center

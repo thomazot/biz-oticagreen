@@ -1,0 +1,39 @@
+<div class="footer__row">
+    <div class="footer__box">
+        <h3 class="footer__title">Ótica Green</h3>
+        <div class="footer__content">
+            {{block type="menubuilder/output" identifier="footer-otica-green"}}
+        </div>
+    </div>
+    <div class="footer__box">
+        <h3 class="footer__title">Dúvidas</h3>
+        <div class="footer__content">
+            {{block type="menubuilder/output" identifier="footer-duvidas"}}
+        </div>
+    </div>
+    <div class="footer__box">
+        <h3 class="footer__title">Departamentos</h3>
+        <div class="footer__content">
+            {{block type="menubuilder/output" identifier="footer-departamentos"}}
+        </div>
+    </div>
+    <div class="footer__box">
+        <h3 class="footer__title">Redes Sociais</h3>
+        <div class="footer__content">
+            
+        </div>
+    </div>
+</div>
+<div class="footer__row footer__row--buttom">
+    <div class="footer__box">
+        <h3 class="footer__title">Formas de Pagamento</h3>
+        {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="pagtos_footer" pagtos="all"}}
+    </div>
+    <div class="footer__box">
+        <h3 class="footer__title">Selos e Certificados</h3>
+        {{widget type="interface/widget_seals" template="interface/widgets/seals.phtml" identificador="selos_footer" seals="all"}}
+    </div>
+</div>
+<div class="footer__row footer__row--copyright">
+	{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="footer-texto-2"}}
+</div>

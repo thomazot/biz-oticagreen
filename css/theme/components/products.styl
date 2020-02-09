@@ -1,0 +1,55 @@
+.products
+    &__header
+        img
+            width: 260px
+            height: 260px
+            object-fit: contain
+
+    &__case
+        box-shadow: none
+        text-align: center
+
+    &__item:not(.flex-fix)
+        margin-bottom: 30px
+        padding: 0 0 30px
+        border-bottom: solid 1px #f2f4f7
+
+    &__name
+        display: block
+        margin-bottom: 15px
+        color: color1_bg
+        font-weight: bold
+        font-size: 14px
+
+    .configurable-swatch-list
+        justify-content: center
+
+        a
+            position: relative
+            min-width: 0
+            width: 16px
+            height: 16px
+            box-shadow: none
+
+            &:before
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                border: solid 1px #d1d2d5
+                border-radius: 50%
+                box-shadow: inset 0 0 0 2px #fff
+                content: ''
+                opacity: 0
+
+            img
+                width: 100%
+                height: 100%
+                border-radius: 50%
+
+            &:hover
+                box-shadow: none
+
+                &:before
+                    opacity: 1

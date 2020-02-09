@@ -1,4 +1,7 @@
 {
     "eslint.enable": false,
-    "stylint.enable": false
+    "explorer.sortOrder": "type",
+    "search.sortOrder": "type",
+    "stylint.run": "onSave",
+    "editor.formatOnSave": true
 }

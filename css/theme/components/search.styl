@@ -1,0 +1,50 @@
+.search
+    &__button
+        background: #fff
+        color: color1_bg
+
+        .ico
+            width: 14px
+            height: 14px
+
+        &:hover
+            background: #fff
+            color: color1_bg
+
+    @media (max-width: 568px)
+        .header &
+            &.on
+                .search
+                    &__input
+                        border-radius: 0
+
+    @media (min-width: 569px)
+        input&__input
+            padding: 0
+            height: 30px
+            border: 0
+            border-bottom: solid 1px #ecf1f5
+            border-radius: 0
+            box-shadow: none
+            font-size: 12px
+
+            &::placeholder
+                color: color2_bg_hover
+
+            &:focus::placeholder
+                color: transparent
+
+        &__button
+            display: flex
+            order: -1
+            justify-content: center
+            align-items: center
+            padding: 0
+            width: 30px
+            height: 30px
+            box-shadow: none
+            color: #c1c1c1
+
+    @media (min-width: 993px)
+        .header &
+            flex: 0 1 240px

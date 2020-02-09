@@ -1,4 +1,19 @@
 .logo
     .header &
+        margin: 0
+
+        a
+            color: color1_bg_hover !important
+
         img, svg
-            height: 48px
+            height: 27px
+
+        @media (max-width: 992px)
+            order: 0
+
+        @media (min-width: 993px)
+            flex: 1
+            min-width: 0
+
+            img, svg
+                margin: 0 auto
