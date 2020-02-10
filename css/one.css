@@ -12259,6 +12259,9 @@ body,
     flex-flow: column nowrap;
     min-height: 605px;
   }
+  .opc .footer {
+    min-height: 0;
+  }
   .footer .pays__item {
     padding-right: 0;
     padding-left: 0;
@@ -12274,6 +12277,13 @@ body,
   }
   .footer__row:first-child .footer__box {
     flex: 0 1 205px;
+  }
+  .opc .footer__row:first-child .footer__box:first-child {
+    flex: 1;
+    min-width: 0;
+  }
+  .opc .footer__row:first-child .footer__box:last-child {
+    flex: 0 1 440px;
   }
   .footer__row--buttom {
     margin-top: auto;

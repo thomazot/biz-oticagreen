@@ -60,6 +60,9 @@
         flex-flow: column nowrap
         min-height: 605px
 
+        .opc &
+            min-height: 0
+
         .pays__item
             padding-right: 0
             padding-left: 0
@@ -75,6 +78,15 @@
 
                 .footer__box
                     flex: 0 1 205px
+
+                .opc &
+                    .footer__box
+                        &:first-child
+                            flex: 1
+                            min-width: 0
+
+                        &:last-child
+                            flex: 0 1 440px
 
             &--buttom
                 margin-top: auto
