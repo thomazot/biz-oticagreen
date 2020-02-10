@@ -14,7 +14,7 @@ select:hover,
 textarea:hover,
 input:hover,
 input:focus {
-  border-color: #414445;
+  border-color: @bg(1);
 }
 input[type='button'],
 input[type='submit'],
@@ -31,7 +31,7 @@ address .ico {
   display: inline;
   margin-right: 0.25rem;
   vertical-align: baseline;
-  fill: #000;
+  fill: @bg(2);
 }
 iframe[name='google_conversion_frame'] {
   position: fixed;
@@ -39,10 +39,10 @@ iframe[name='google_conversion_frame'] {
   left: -62.44rem;
 }
 a {
-  color: #414445;
+  color: @bg(1);
 }
 a:hover {
-  color: #000;
+  color: @bg(1:hover);
 }
 /* Transition */
 a,
@@ -228,7 +228,7 @@ svg.img-twitter {
 }
 .page-title h1 {
   margin: 0 0 0.25em;
-  color: #414445;
+  color: @bg(1);
   font-weight: 700;
   font-size: 3rem;
   line-height: 1em;
@@ -250,9 +250,9 @@ input[type=submit] {
   height: auto;
   border: 0;
   border-radius: 3px;
-  background: #414445;
+  background: @bg(1);
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
-  color: #fff;
+  color: @color(1);
   font-size: 1rem;
   line-height: 1em;
   cursor: pointer;
@@ -262,19 +262,19 @@ input[type=submit] {
 button .ico {
   display: inline-block;
   vertical-align: baseline;
-  fill: #fff;
+  fill: @color(2);
 }
 .btn:hover,
 button:hover,
 input[type=button]:hover,
 input[type=reset]:hover,
 input[type=submit]:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
 }
 .btn:hover .ico,
 button:hover .ico {
-  fill: #fff;
+  fill: @color(1:hover);
 }
 .btn--flat {
   border-radius: 0;
@@ -285,22 +285,22 @@ button:hover .ico {
   box-shadow: 0 1rem 1.5rem -1.5rem rgba(0,0,0,0.3);
 }
 .btn--emboss {
-  background: linear-gradient(#000, #333);
+  background: linear-gradient(@bg(2), @bg(2:hover));
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1), inset 0 -3px 0 rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2);
   text-shadow: 0 1px 0 rgba(0,0,0,0.3);
 }
 .btn--emboss:hover {
-  background: linear-gradient(#333, #000);
+  background: linear-gradient(@bg(2:hover), @bg(2));
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1), inset 0 3px 0 rgba(0,0,0,0.2);
 }
 .btn--outline {
   background: none;
-  box-shadow: inset 0 0 0 1px #000;
-  color: #000;
+  box-shadow: inset 0 0 0 1px @bg(2);
+  color: @bg(2);
 }
 .btn--outline:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
 }
 .btn--disabled {
   background: rgba(0,0,0,0.5);
@@ -369,11 +369,11 @@ button:hover .ico {
 }
 /* .link */
 .link {
-  color: #414445;
+  color: @bg(1);
   font-weight: 600;
 }
 .link:hover {
-  color: #000;
+  color: @bg(1:hover);
 }
 /* .divider */
 .divider {
@@ -533,7 +533,7 @@ button:hover .ico {
 .search__filter .label:hover:before,
 .search__filter.filtered .label,
 .search__filter.filtered .label:before {
-  color: #414445;
+  color: @bg(1);
 }
 .search__filter select {
   position: absolute;
@@ -582,7 +582,7 @@ button:hover .ico {
   page-break-inside: avoid;
 }
 .search__filter li:hover {
-  color: #414445;
+  color: @bg(1);
 }
 .search__filter li.default {
   display: block;
@@ -595,8 +595,8 @@ button:hover .ico {
   -moz-column-span: all;
 }
 .search__filter li.default:hover {
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
 }
 .search__button {
   flex: 0 0 auto;
@@ -619,7 +619,7 @@ button:hover .ico {
   cursor: pointer;
 }
 .search__autocomplete li:hover {
-  color: #414445;
+  color: @bg(1);
 }
 .search__autocomplete li:not(:last-child) {
   margin-bottom: 1rem;
@@ -700,14 +700,14 @@ form.searchautocomplete {
   display: inline-block;
   padding: 0 1.25rem;
   border-radius: 3px;
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
   font-size: 0.75rem;
   line-height: 1.88rem;
 }
 .searchautocomplete-placeholder .all a:hover {
-  background: #333;
-  color: #fff;
+  background: @bg(2:hover);
+  color: @color(1:hover);
 }
 .searchautocomlete-image {
   flex: 0 0 auto;
@@ -730,7 +730,7 @@ form.searchautocomplete {
   font-weight: 600;
 }
 .searchautocomlete-info .name:hover {
-  color: #000;
+  color: @bg(1:hover);
 }
 .searchautocomlete-info .name,
 .searchautocomlete-info .regular-price,
@@ -826,8 +826,8 @@ form.searchautocomplete {
 }
 .newsletter__message {
   padding: 1rem;
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
   text-align: center;
 }
 .newsletter .male-label,
@@ -871,14 +871,14 @@ form.searchautocomplete {
 }
 .newsletter .male-label:hover,
 .newsletter .female-label:hover {
-  border-color: #414445;
-  color: #414445;
+  border-color: @bg(1);
+  color: @bg(1);
 }
 .newsletter .male-label.checked,
 .newsletter .female-label.checked {
-  border-color: #414445;
-  background: #414445;
-  color: #fff;
+  border-color: @bg(1);
+  background: @bg(1);
+  color: @color(1);
 }
 .newsletter .label {
   display: none;
@@ -976,7 +976,7 @@ form.searchautocomplete {
 }
 .products .esgotado {
   margin-bottom: 1rem;
-  color: #ccc;
+  color: @bg(3);
   font-weight: 600;
   font-size: 0.8rem;
 }
@@ -1036,7 +1036,7 @@ form.searchautocomplete {
   transition: all 200ms ease-out;
 }
 .related__add-checkbox label:hover {
-  background: #000;
+  background: @bg(2);
 }
 .related__add-checkbox input {
   margin: 0;
@@ -1176,7 +1176,7 @@ form.searchautocomplete {
   display: none;
 }
 .testimonials__form .refresh-captcha:hover .svg-loader .spinner {
-  stroke: #fff;
+  stroke: @color(2);
 }
 .testimonials__rating {
   float: left;
@@ -1199,7 +1199,7 @@ form.searchautocomplete {
   display: none;
 }
 .positivo .testimonials__rating:before {
-  color: #414445;
+  color: @bg(1);
   content: '\f164';
   text-transform: none;
   font-weight: normal;
@@ -1264,7 +1264,7 @@ form.searchautocomplete {
   cursor: pointer;
 }
 .poll__label:hover {
-  color: #414445;
+  color: @bg(1);
 }
 .poll__results {
   display: flex;
@@ -1281,28 +1281,28 @@ form.searchautocomplete {
   margin-bottom: 1rem;
 }
 .poll__results-item:nth-child(9n+1) {
-  color: #414445;
+  color: @bg(1);
 }
 .poll__results-item:nth-child(9n+2) {
-  color: #000;
+  color: @bg(2);
 }
 .poll__results-item:nth-child(9n+3) {
-  color: #ccc;
+  color: @bg(3);
 }
 .poll__results-item:nth-child(9n+4) {
-  color: #ca213e;
+  color: @button(bg);
 }
 .poll__results-item:nth-child(9n+5) {
-  color: #000;
+  color: @bg(1:hover);
 }
 .poll__results-item:nth-child(9n+6) {
-  color: #333;
+  color: @bg(2:hover);
 }
 .poll__results-item:nth-child(9n+7) {
-  color: #f7f7f7;
+  color: @bg(3:hover);
 }
 .poll__results-item:nth-child(9n+8) {
-  color: #900;
+  color: @button(bg:hover);
 }
 .poll__results-item .votes {
   display: block;
@@ -1334,28 +1334,28 @@ form.searchautocomplete {
   stroke-dashoffset: 132px !important;
 }
 .poll__percent .on:nth-child(9n+1) {
-  stroke: #414445;
+  stroke: @bg(1);
 }
 .poll__percent .on:nth-child(9n+2) {
-  stroke: #000;
+  stroke: @bg(2);
 }
 .poll__percent .on:nth-child(9n+3) {
-  stroke: #ccc;
+  stroke: @bg(3);
 }
 .poll__percent .on:nth-child(9n+4) {
-  stroke: #ca213e;
+  stroke: @button(bg);
 }
 .poll__percent .on:nth-child(9n+5) {
-  stroke: #000;
+  stroke: @bg(1:hover);
 }
 .poll__percent .on:nth-child(9n+6) {
-  stroke: #333;
+  stroke: @bg(2:hover);
 }
 .poll__percent .on:nth-child(9n+7) {
-  stroke: #f7f7f7;
+  stroke: @bg(3:hover);
 }
 .poll__percent .on:nth-child(9n+8) {
-  stroke: #900;
+  stroke: @button(bg:hover);
 }
 .poll__content.loading .svg-loader {
   z-index: 10;
@@ -1434,16 +1434,16 @@ form.searchautocomplete {
   width: 100%;
   height: 2.75rem;
   border-radius: 3px;
-  box-shadow: inset 0 0 0 1px #414445;
-  color: #414445;
+  box-shadow: inset 0 0 0 1px @bg(1);
+  color: @bg(1);
   text-align: center;
   line-height: 2.75rem;
 }
 .glossary__letter:not(.empty):hover,
 .glossary__letter.current {
-  background: #414445;
+  background: @bg(1);
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
-  color: #fff;
+  color: @color(1);
 }
 .glossary__letter.empty {
   background: rgba(0,0,0,0.05);
@@ -1495,14 +1495,14 @@ form.searchautocomplete {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 100%;
-  box-shadow: inset 0 0 0 1px #414445;
+  box-shadow: inset 0 0 0 1px @bg(1);
 }
 .mywish__header .ico {
   max-height: none;
   width: 1.2rem;
   height: 1rem;
   fill: none;
-  stroke: #414445;
+  stroke: @bg(1);
 }
 .mywish__header .text {
   display: none;
@@ -1514,8 +1514,8 @@ form.searchautocomplete {
   width: 1rem;
   height: 1rem;
   border-radius: 100%;
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
   text-align: center;
   text-indent: -1.5px;
   letter-spacing: -0.1em;
@@ -1531,7 +1531,7 @@ form.searchautocomplete {
   max-width: 90vw;
   width: 20rem;
   background: #fff;
-  box-shadow: inset 0 1px 0 #414445, inset 0 0 0 1px rgba(0,0,0,0.1), 0 1rem 1rem rgba(0,0,0,0.5);
+  box-shadow: inset 0 1px 0 @bg(1), inset 0 0 0 1px rgba(0,0,0,0.1), 0 1rem 1rem rgba(0,0,0,0.5);
 }
 .drop--left .mywish__content {
   right: auto;
@@ -1548,16 +1548,16 @@ form.searchautocomplete {
 .drop--bottom .mywish__content {
   top: auto;
   bottom: 100%;
-  box-shadow: inset 0 -1px 0 #414445, inset 0 0 0 1px rgba(0,0,0,0.1), 0 1rem 1rem rgba(0,0,0,0.5);
+  box-shadow: inset 0 -1px 0 @bg(1), inset 0 0 0 1px rgba(0,0,0,0.1), 0 1rem 1rem rgba(0,0,0,0.5);
 }
 .mywish:hover .mywish__content {
   display: block;
 }
 .mywish:hover .mywish__header a {
-  background: #414445;
+  background: @bg(1);
 }
 .mywish:hover .mywish__header .ico {
-  fill: #fff !important;
+  fill: @color(1) !important;
 }
 .mywish__list {
   overflow: auto;
@@ -1572,7 +1572,7 @@ form.searchautocomplete {
   background: rgba(0,0,0,0.1);
 }
 .mywish__list::-webkit-scrollbar-thumb {
-  background: #414445;
+  background: @bg(1);
 }
 .mywish__item {
   position: relative;
@@ -1614,11 +1614,11 @@ form.searchautocomplete {
   padding: 1rem;
 }
 .mywish__actions a:hover {
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
 }
 .mywish--items .mywish__header .ico {
-  fill: #414445;
+  fill: @bg(1);
 }
 /* Meu Carrinho */
 .mycart {
@@ -1637,7 +1637,7 @@ form.searchautocomplete {
   max-height: 80vh;
   width: 20rem;
   background: #fff;
-  box-shadow: inset 0 1px 0 #414445, inset 0 0 0 1px rgba(0,0,0,0.1), 0 1rem 1rem rgba(0,0,0,0.5);
+  box-shadow: inset 0 1px 0 @bg(1), inset 0 0 0 1px rgba(0,0,0,0.1), 0 1rem 1rem rgba(0,0,0,0.5);
 }
 .drop--left .mycart__content {
   right: auto;
@@ -1654,7 +1654,7 @@ form.searchautocomplete {
 .drop--bottom .mycart__content {
   top: auto;
   bottom: 100%;
-  box-shadow: inset 0 -1px 0 #414445, inset 0 0 0 1px rgba(0,0,0,0.1), 0 1rem 1rem rgba(0,0,0,0.5);
+  box-shadow: inset 0 -1px 0 @bg(1), inset 0 0 0 1px rgba(0,0,0,0.1), 0 1rem 1rem rgba(0,0,0,0.5);
 }
 .mycart:hover .mycart__content {
   display: block;
@@ -1672,7 +1672,7 @@ form.searchautocomplete {
   background: rgba(0,0,0,0.1);
 }
 .mycart__list::-webkit-scrollbar-thumb {
-  background: #414445;
+  background: @bg(1);
 }
 .mycart__item {
   position: relative;
@@ -1741,8 +1741,8 @@ form.searchautocomplete {
   font-weight: 600;
 }
 .mycart__actions a:hover {
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
 }
 .mycart__hide {
   display: none;
@@ -1762,7 +1762,7 @@ form.searchautocomplete {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 100%;
-  box-shadow: inset 0 0 0 1px #414445;
+  box-shadow: inset 0 0 0 1px @bg(1);
 }
 .myaccount__header .thumb {
   position: absolute;
@@ -1783,7 +1783,7 @@ form.searchautocomplete {
   max-height: none;
   width: 2.75rem;
   height: 2.75rem;
-  fill: #414445;
+  fill: @bg(1);
 }
 .myaccount__header .name,
 .myaccount__header .text {
@@ -1798,7 +1798,7 @@ form.searchautocomplete {
   max-width: 90vw;
   width: 20rem;
   background: #fff;
-  box-shadow: inset 0 1px 0 #414445, inset 0 0 0 1px rgba(0,0,0,0.1), 0 1rem 1rem rgba(0,0,0,0.5);
+  box-shadow: inset 0 1px 0 @bg(1), inset 0 0 0 1px rgba(0,0,0,0.1), 0 1rem 1rem rgba(0,0,0,0.5);
 }
 .drop--left .myaccount__content {
   right: auto;
@@ -1815,7 +1815,7 @@ form.searchautocomplete {
 .drop--bottom .myaccount__content {
   top: auto;
   bottom: 100%;
-  box-shadow: inset 0 -1px 0 #414445, inset 0 0 0 1px rgba(0,0,0,0.1), 0 1rem 1rem rgba(0,0,0,0.5);
+  box-shadow: inset 0 -1px 0 @bg(1), inset 0 0 0 1px rgba(0,0,0,0.1), 0 1rem 1rem rgba(0,0,0,0.5);
 }
 .myaccount:hover .myaccount__content {
   display: block;
@@ -1849,8 +1849,8 @@ form.searchautocomplete {
   padding: 1rem;
 }
 .myaccount__content .mb-menu li.logout a:hover {
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
 }
 .myaccount__login {
   margin-bottom: 1rem;
@@ -1952,7 +1952,7 @@ form.searchautocomplete {
 }
 .brands__item a:hover {
   z-index: 10;
-  border-color: #414445;
+  border-color: @bg(1);
 }
 .brands__item img {
   display: block;
@@ -1977,7 +1977,7 @@ form.searchautocomplete {
 }
 /* Menu de Categorias */
 .categories {
-  background: #414445;
+  background: @bg(1);
 }
 .categories a {
   display: flex;
@@ -1991,7 +1991,7 @@ form.searchautocomplete {
   max-height: 2rem;
   width: auto;
   height: auto;
-  fill: #fff;
+  fill: @color(1);
 }
 .categories a svg {
   width: 1rem;
@@ -2012,16 +2012,16 @@ form.searchautocomplete {
   transform: translateX(0);
 }
 .categories .li--0:hover .a--0 {
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
 }
 .categories .li--0:hover .a--0 svg {
-  fill: #fff;
+  fill: @color(1:hover);
 }
 .categories .a--0 {
   padding: 0 1rem;
   height: 2.75rem;
-  color: #fff;
+  color: @color(1);
   text-align: center;
   line-height: 2.75rem;
   cursor: pointer;
@@ -2086,7 +2086,7 @@ form.searchautocomplete {
   background: rgba(0,0,0,0.1);
 }
 .all-ul--0::-webkit-scrollbar-thumb {
-  background: #414445;
+  background: @bg(1);
 }
 .all-ul--0 .std {
   display: none;
@@ -2105,8 +2105,8 @@ form.searchautocomplete {
   font-size: 1.2rem;
 }
 .all-a--0:hover {
-  box-shadow: -0.5rem 0 0 #414445;
-  color: #414445;
+  box-shadow: -0.5rem 0 0 @bg(1);
+  color: @bg(1);
 }
 .all-ul--1 {
   font-size: 0.8rem;
@@ -2117,8 +2117,8 @@ form.searchautocomplete {
   color: rgba(0,0,0,0.7);
 }
 .all-a--1:hover {
-  box-shadow: -0.5rem 0 0 #000;
-  color: #000;
+  box-shadow: -0.5rem 0 0 @bg(2);
+  color: @bg(2);
 }
 .all-ul--2 {
   font-size: 0.7rem;
@@ -2129,8 +2129,8 @@ form.searchautocomplete {
   color: rgba(0,0,0,0.4);
 }
 .all-a--2:hover {
-  box-shadow: -0.5rem 0 0 #ccc;
-  color: #ccc;
+  box-shadow: -0.5rem 0 0 @bg(3);
+  color: @bg(3);
 }
 /* Ajustado - default */
 .categories--justify .ul--0 {
@@ -2175,7 +2175,7 @@ form.searchautocomplete {
   padding: 0.5rem;
 }
 .categories--justify .a--1:hover {
-  box-shadow: -0.5rem 0 0 #414445;
+  box-shadow: -0.5rem 0 0 @bg(1);
 }
 .categories--justify .ul--2 {
   padding-bottom: 0.5rem;
@@ -2185,8 +2185,8 @@ form.searchautocomplete {
   color: rgba(0,0,0,0.5);
 }
 .categories--justify .a--2:hover {
-  box-shadow: -0.5rem 0 0 #000;
-  color: #000;
+  box-shadow: -0.5rem 0 0 @bg(2);
+  color: @bg(2);
 }
 .categories--justify .categories__all {
   flex: 0 0 auto;
@@ -2238,7 +2238,7 @@ form.searchautocomplete {
   padding: 0.5rem;
 }
 .categories--vertical .a--1:hover {
-  box-shadow: -0.5rem 0 0 #414445;
+  box-shadow: -0.5rem 0 0 @bg(1);
 }
 .categories--vertical .ul--2 {
   padding-bottom: 0.5rem;
@@ -2248,12 +2248,12 @@ form.searchautocomplete {
   color: rgba(0,0,0,0.5);
 }
 .categories--vertical .a--2:hover {
-  box-shadow: -0.5rem 0 0 #000;
-  color: #000;
+  box-shadow: -0.5rem 0 0 @bg(2);
+  color: @bg(2);
 }
 /* Prateleira */
 .categories--shelf {
-  background: linear-gradient(#414445 0, #414445 2.75rem, rgba(1,9,1,0.9) 5.5rem, rgba(1,8,1,0.8) 8.25rem, rgba(1,7,1,0.7) 11rem, rgba(1,6,1,0.6) 13.75rem);
+  background: linear-gradient(@bg(1) 0, @bg(1) 2.75rem, rgba(1,9,1,0.9) 5.5rem, rgba(1,8,1,0.8) 8.25rem, rgba(1,7,1,0.7) 11rem, rgba(1,6,1,0.6) 13.75rem);
 }
 .categories--shelf .ul--0 {
   display: flex;
@@ -2307,7 +2307,7 @@ form.searchautocomplete {
   padding: 0.5rem;
 }
 .categories--shelf .a--1:hover {
-  box-shadow: -0.5rem 0 0 #414445;
+  box-shadow: -0.5rem 0 0 @bg(1);
 }
 .categories--shelf .ul--2 {
   padding-bottom: 0.5rem;
@@ -2317,8 +2317,8 @@ form.searchautocomplete {
   color: rgba(0,0,0,0.5);
 }
 .categories--shelf .a--2:hover {
-  box-shadow: -0.5rem 0 0 #000;
-  color: #000;
+  box-shadow: -0.5rem 0 0 @bg(2);
+  color: @bg(2);
 }
 .categories--shelf .categories__all {
   flex: 0 0 auto;
@@ -2354,14 +2354,14 @@ form.searchautocomplete {
 .categories__header {
   width: 2.75rem;
   height: 2.75rem;
-  color: #fff;
+  color: @color(1);
   text-align: center;
   line-height: 2.75rem;
   cursor: pointer;
 }
 .categories__header:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
 }
 .categories__content {
   position: fixed;
@@ -2374,7 +2374,7 @@ form.searchautocomplete {
   max-height: 100vh;
   width: 100vw;
   height: 100vh;
-  background: #414445;
+  background: @bg(1);
   transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
   transform: translateX(-100%);
 }
@@ -2385,7 +2385,7 @@ form.searchautocomplete {
   margin-left: auto;
   width: 2.75rem;
   height: 2.75rem;
-  color: #fff;
+  color: @color(1);
   text-align: center;
   line-height: 2.75rem;
 }
@@ -2394,8 +2394,8 @@ form.searchautocomplete {
   display: none;
 }
 .categories__close:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
 }
 .categories--mini .ul--0 {
   display: flex;
@@ -2423,10 +2423,10 @@ form.searchautocomplete {
 }
 .categories--mini .li--0:hover .a--0 {
   background: none;
-  color: #fff;
+  color: @color(1);
 }
 .categories--mini .li--0:hover .a--0 svg {
-  fill: #fff;
+  fill: @color(1);
 }
 .categories--mini .a--0 {
   padding: 1rem;
@@ -2437,11 +2437,11 @@ form.searchautocomplete {
   line-height: 1em;
 }
 .categories--mini .li--0:hover .a--0:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
 }
 .categories--mini .li--0:hover .a--0:hover svg {
-  color: #fff;
+  color: @color(1:hover);
 }
 .categories--mini .box--1 {
   display: block;
@@ -2458,11 +2458,11 @@ form.searchautocomplete {
 .categories--mini .a--1 {
   display: block;
   padding: 0.5rem 1rem;
-  color: #fff;
+  color: @color(1);
 }
 .categories--mini .a--1:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
 }
 .categories--mini .ul--2 {
   -webkit-column-gap: 1rem;
@@ -2481,11 +2481,11 @@ form.searchautocomplete {
 }
 .categories--mini .a--2 {
   padding: 0.5rem 1rem;
-  color: #fff;
+  color: @color(1);
 }
 .categories--mini .a--2:hover {
-  background: #ccc;
-  color: #fff;
+  background: @bg(3);
+  color: @color(3);
 }
 .categories__show,
 .categories__hide {
@@ -2581,9 +2581,9 @@ form.searchautocomplete {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 3px;
-  background: #414445;
+  background: @bg(1);
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
-  color: #fff;
+  color: @color(1);
   text-indent: -9999px;
   font-size: 0;
 }
@@ -2611,8 +2611,8 @@ form.searchautocomplete {
 }
 .owl-prev:hover,
 .owl-next:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
 }
 body.ie .owl-prev,
 body.ie .owl-next {
@@ -2632,7 +2632,7 @@ body.ie .owl-next:before {
 }
 .owl-next:before,
 .owl-page span {
-  background: #414445;
+  background: @bg(1);
   content: '\f054';
   text-transform: none;
   font-weight: normal;
@@ -2799,7 +2799,7 @@ body.ie .owl-next:before {
   align-items: center;
   padding: 0 15%;
   width: 100%;
-  color: #414445;
+  color: @bg(1);
   font-size: 1.2rem;
   line-height: 1em;
 }
@@ -2807,7 +2807,7 @@ body.ie .owl-next:before {
   position: relative;
   flex: 1 1 100%;
   margin: -1rem 0 1rem;
-  color: #000;
+  color: @bg(2);
   text-align: center;
   font-size: 2rem;
   line-height: 1em;
@@ -2818,7 +2818,7 @@ body.ie .owl-next:before {
   position: relative;
 }
 .timer__days.zero {
-  color: #000;
+  color: @bg(2);
 }
 .timer__hours.zero,
 .timer__minutes.zero,
@@ -3079,10 +3079,10 @@ body.ie .owl-next:before {
   font-style: italic;
 }
 .col-main .note-msg .suggest a {
-  color: #414445;
+  color: @bg(1);
 }
 .col-main .note-msg .suggest a:hover {
-  color: #000;
+  color: @bg(1:hover);
 }
 /* Toolbar */
 .toolbar {
@@ -3140,14 +3140,14 @@ body.ie .owl-next:before {
   height: 1.5rem;
 }
 .toolbar .view-mode strong svg {
-  fill: #414445;
+  fill: @bg(1);
 }
 .toolbar .view-mode a svg {
   transition: all 100ms ease-in-out;
   fill: #d6d6d6;
 }
 .toolbar .view-mode a:hover svg {
-  fill: #000;
+  fill: @bg(1:hover);
 }
 .toolbar .limiter {
   margin-left: 1rem;
@@ -3172,8 +3172,8 @@ body.ie .owl-next:before {
   display: block;
   padding: 0 0.25rem;
   min-width: 2rem;
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
   text-align: center;
   line-height: 2rem;
 }
@@ -3185,8 +3185,8 @@ body.ie .owl-next:before {
   line-height: 2rem;
 }
 .pager a:hover {
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
 }
 .pager a.next span,
 .pager a.previous span {
@@ -3255,10 +3255,10 @@ body.ie .owl-next:before {
 }
 .filters__filter .a--1 {
   display: block;
-  color: #000;
+  color: @bg(2);
 }
 .filters__filter .a--1:hover {
-  color: #333;
+  color: @bg(2:hover);
 }
 .filters__swatches .ul--0 {
   display: flex;
@@ -3278,8 +3278,8 @@ body.ie .owl-next:before {
   color: rgba(0,0,0,0.6);
 }
 .filters__swatches .a--0:hover {
-  box-shadow: 0 0 0 1px #414445;
-  color: #414445;
+  box-shadow: 0 0 0 1px @bg(1);
+  color: @bg(1);
 }
 .filters__swatches .swatch {
   display: block;
@@ -3314,7 +3314,7 @@ body.ie .owl-next:before {
   font-size: 0.8rem;
 }
 .filtered__clear:hover {
-  color: #414445;
+  color: @bg(1);
 }
 .filters__filtered .li--0 {
   display: flex;
@@ -3402,14 +3402,14 @@ body.ie .owl-next:before {
   opacity: 0.3;
 }
 .configurable-swatch-list a:hover {
-  background: #414445;
-  box-shadow: 0 0 0 1px #414445;
-  color: #fff;
+  background: @bg(1);
+  box-shadow: 0 0 0 1px @bg(1);
+  color: @color(1);
 }
 .configurable-swatch-list .selected a {
-  background: #414445;
-  box-shadow: 0 0 0 3px #414445;
-  color: #fff;
+  background: @bg(1);
+  box-shadow: 0 0 0 3px @bg(1);
+  color: @color(1);
 }
 /* Preços */
 .price-box {
@@ -3420,7 +3420,7 @@ body.ie .owl-next:before {
 }
 .price-from {
   display: block;
-  color: #000;
+  color: @bg(1:hover);
 }
 .price-from .label {
   font-size: 0.8em;
@@ -3454,7 +3454,7 @@ body.ie .owl-next:before {
 }
 .tier-price .qty,
 .tier-price .price {
-  color: #000;
+  color: @bg(1:hover);
   font-weight: 700;
 }
 .price-to .price,
@@ -3471,7 +3471,7 @@ body.ie .owl-next:before {
 .regular-price,
 .special-price {
   display: block;
-  color: #000;
+  color: @bg(1:hover);
 }
 .regular-price .price,
 .special-price .price {
@@ -3479,7 +3479,7 @@ body.ie .owl-next:before {
 }
 .price-as-configured {
   display: block;
-  color: #000;
+  color: @bg(1:hover);
   font-size: 0.88rem;
 }
 .price-as-configured .price {
@@ -3523,7 +3523,7 @@ body.ie .owl-next:before {
   flex-flow: row wrap;
   align-items: center;
   margin-bottom: 1rem;
-  color: #000;
+  color: @bg(2);
   text-align: left;
 }
 .price-box-avista .label {
@@ -3539,7 +3539,7 @@ body.ie .owl-next:before {
 }
 .price-box-parcelado .num,
 .price-box-parcelado .value {
-  color: #000;
+  color: @bg(2);
   font-weight: 700;
 }
 .price-box-parcelado .juros {
@@ -3548,7 +3548,7 @@ body.ie .owl-next:before {
 }
 .preco-parcelado-sem-juros {
   margin-bottom: 0.25rem;
-  color: #000;
+  color: @bg(2);
 }
 .price-box-parcelado,
 .preco-parcelado-sem-juros,
@@ -3766,10 +3766,10 @@ body.ie .owl-next:before {
   background: #007bb5;
 }
 .sharing-links .email-to-friend a {
-  background: #414445;
+  background: @bg(1);
 }
 .sharing-links .email-to-friend a:before {
-  color: #fff;
+  color: @color(1);
   font-size: 1rem;
   content: '\f003';
   text-transform: none;
@@ -3794,8 +3794,8 @@ body.ie .owl-next:before {
   padding: 0 1rem 0 4rem;
   width: 100%;
   height: 4rem;
-  background: #ca213e;
-  color: #fff;
+  background: @button(bg);
+  color: @button(color);
   white-space: nowrap;
   font-weight: 700;
   font-size: 2rem;
@@ -3806,8 +3806,8 @@ body.ie .owl-next:before {
 }
 .add-to-cart-btn:hover,
 .add-to-cart-btn:active {
-  background: #900;
-  color: #fff;
+  background: @button(bg:hover);
+  color: @button(color:hover);
 }
 .add-to-cart-btn.out-of-stock,
 .add-to-cart-btn.out-of-stock:hover,
@@ -3835,8 +3835,8 @@ body.ie .owl-next:before {
   font-size: 0.8rem;
 }
 .add-to-links a:hover {
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
 }
 /* @fotos */
 .product-image-gallery {
@@ -3873,13 +3873,13 @@ body.safari .product-image-thumbs .thumb-link {
 }
 .product-image-thumbs .thumb-link:hover,
 .product-image-thumbs .thumb-link.on {
-  box-shadow: 0 0 0 1px #414445;
+  box-shadow: 0 0 0 1px @bg(1);
 }
 .product-image-thumbs .video-thumb {
   position: relative;
   flex: 1 1 100%;
   border-radius: 3px;
-  background-color: #000;
+  background-color: @bg(1:hover);
   background-position: center;
   background-size: auto 140%;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
@@ -3902,7 +3902,7 @@ body.safari .product-image-thumbs .thumb-link {
   fill: #fff;
 }
 .product-image-thumbs .video-thumb:hover {
-  box-shadow: 0 0 0 1px #414445;
+  box-shadow: 0 0 0 1px @bg(1);
 }
 .product-image-thumbs .video-thumb:hover .play .ico {
   opacity: 0.6;
@@ -3961,8 +3961,8 @@ body.safari .product-image-thumbs .thumb-link {
 .parcelamento .s-juros {
   padding: 0 0.25rem 0.13rem;
   border-radius: 3px;
-  background: #ccc;
-  color: #fff;
+  background: @bg(3);
+  color: @color(3);
   white-space: nowrap;
 }
 .parcelamento .parcela {
@@ -3988,12 +3988,12 @@ body.safari .product-image-thumbs .thumb-link {
 .block-freegift {
   margin-bottom: 1.25rem;
   padding: 0.94rem;
-  box-shadow: inset 0 0 0 3px #414445;
+  box-shadow: inset 0 0 0 3px @bg(1);
   text-align: center;
 }
 .block-freegift .title {
   margin-bottom: 0.94rem;
-  color: #414445;
+  color: @bg(1);
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -4053,11 +4053,11 @@ body.safari .product-image-thumbs .thumb-link {
   order: 1;
 }
 .frete__title:hover {
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
 }
 .frete__title:hover .ico {
-  fill: #fff;
+  fill: @color(1);
 }
 .frete__content {
   display: none;
@@ -4066,11 +4066,11 @@ body.safari .product-image-thumbs .thumb-link {
   display: block;
 }
 .frete--open .frete__title {
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
 }
 .frete--open .frete__title .ico {
-  fill: #fff;
+  fill: @color(1);
 }
 .frete__naosei {
   display: block;
@@ -4275,7 +4275,7 @@ body.safari .product-image-thumbs .thumb-link {
   font-size: 0.8rem;
 }
 .prod__shop .product-rate .to-rate:hover {
-  color: #000;
+  color: @bg(1:hover);
 }
 /* @bt(comprar) */
 .prod__shop .add-to-cart {
@@ -4420,7 +4420,7 @@ body.safari .product-image-thumbs .thumb-link {
 }
 .bundle__content.one-option .input-box:after {
   margin-left: 0.25rem;
-  color: #414445;
+  color: @bg(1);
   content: '\f00c';
   text-transform: none;
   font-weight: normal;
@@ -4558,10 +4558,10 @@ tr.bundle:before {
   transition: all 200ms ease-out;
 }
 .grouped__option.added {
-  box-shadow: inset 0 0 0 1px #414445;
+  box-shadow: inset 0 0 0 1px @bg(1);
 }
 .grouped__option.added:not(.out-of-stock):hover {
-  box-shadow: inset 0 0 0 1px #414445, 0 1.5rem 0.5rem rgba(0,0,0,0.2);
+  box-shadow: inset 0 0 0 1px @bg(1), 0 1.5rem 0.5rem rgba(0,0,0,0.2);
 }
 .grouped__option.out-of-stock {
   opacity: 0.5;
@@ -4597,14 +4597,14 @@ tr.bundle:before {
 .added .grouped__check {
   top: -1.5rem;
   height: 1rem;
-  color: #414445;
+  color: @bg(1);
 }
 .grouped__option:not(.out-of-stock):hover {
   z-index: 10;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1), 0 1.5rem 1.5rem -1rem rgba(0,0,0,0.2);
 }
 .grouped__option:not(.out-of-stock):hover .grouped__check {
-  color: #414445;
+  color: @bg(1);
 }
 .grouped__check:before {
   display: inline;
@@ -4669,13 +4669,13 @@ tr.bundle:before {
   overflow: visible;
   width: calc(100% - 1rem);
   height: calc(100% - 1rem);
-  stroke: #ccc;
+  stroke: @bg(3);
   stroke-width: 2px;
   stroke-linecap: round;
 }
 .grouped .availability {
   flex: 1 1 auto;
-  color: #ccc;
+  color: @bg(3);
   text-align: right;
   font-weight: 600;
   font-size: 0.8rem;
@@ -4726,10 +4726,10 @@ tr.bundle:before {
   flex: 1 1 auto;
 }
 .options .img-calendar {
-  color: #414445;
+  color: @bg(1);
 }
 .options .img-calendar:hover {
-  color: #000;
+  color: @bg(1:hover);
 }
 .options .date.time .img-calendar {
   margin-right: 1rem;
@@ -4839,8 +4839,8 @@ tr.bundle:before {
   margin-left: 0.5rem;
   padding: 0.25rem 0.5rem;
   border-radius: 3px;
-  background: #ccc;
-  color: #fff;
+  background: @bg(3);
+  color: @color(3);
   font-size: 0.8rem;
 }
 .downloadable-sample-link:before {
@@ -4860,8 +4860,8 @@ tr.bundle:before {
   display: none;
 }
 .downloadable-sample-link:hover {
-  background: #f7f7f7;
-  color: #fff;
+  background: @bg(3:hover);
+  color: @color(3:hover);
 }
 .downloadable__sample {
   margin-bottom: 1rem;
@@ -4875,7 +4875,7 @@ tr.bundle:before {
 .downloadable__sample .link {
   display: flex;
   align-items: center;
-  color: #000;
+  color: @bg(2);
 }
 .downloadable__sample .link:before {
   margin-right: 0.5rem;
@@ -4891,7 +4891,7 @@ tr.bundle:before {
   -webkit-font-smoothing: antialiased;
 }
 .downloadable__sample .link:hover {
-  color: #333;
+  color: @bg(2:hover);
 }
 /* Produto - Conteúdo Adicional */
 .product-collateral > *:not(:last-child) {
@@ -4956,12 +4956,12 @@ tr.bundle:before {
 .reviews__list::-webkit-scrollbar-track {
   border-radius: 3px;
   background-color: transparent;
-  background-image: linear-gradient(90deg, transparent 50%, #414445 50%);
+  background-image: linear-gradient(90deg, transparent 50%, @bg(1) 50%);
   background-size: 2px 1px;
 }
 .reviews__list::-webkit-scrollbar-thumb {
   border-radius: 3px;
-  background: #414445;
+  background: @bg(1);
 }
 .reviews__list li {
   display: flex;
@@ -4994,7 +4994,7 @@ tr.bundle:before {
   display: block;
 }
 .reviews__logged .title {
-  color: #ccc;
+  color: @bg(3);
 }
 .reviews__add .myaccount {
   height: auto;
@@ -5038,7 +5038,7 @@ tr.bundle:before {
   font-size: 1.2rem;
 }
 .reviews__return.success {
-  color: #414445;
+  color: @bg(1);
 }
 .reviews__return.success:before {
   content: '\f00c';
@@ -5074,7 +5074,7 @@ tr.bundle:before {
   text-align: center;
 }
 .reviews .be-first {
-  color: #414445;
+  color: @bg(1);
   font-weight: 700;
 }
 .review-summary {
@@ -5165,7 +5165,7 @@ tr.bundle:before {
   right: -1rem;
   width: 2rem;
   height: 2rem;
-  color: #000;
+  color: @bg(2);
   text-align: center;
   font-size: 1rem;
   line-height: 2rem;
@@ -5265,7 +5265,7 @@ tr.bundle:before {
   font-size: 0.8rem;
 }
 .jointsales__totals .price {
-  color: #f7f7f7;
+  color: @bg(3:hover);
   font-weight: 700;
 }
 .jointsales__totals .economize {
@@ -5273,11 +5273,11 @@ tr.bundle:before {
   margin-top: 0.25rem;
   padding: 0.25rem 0.5rem;
   border-radius: 3px;
-  background: #ccc;
-  color: #fff;
+  background: @bg(3);
+  color: @color(3);
 }
 .jointsales__totals .economize .price {
-  color: #fff;
+  color: @color(3);
 }
 .jointsales__payments {
   margin-top: 1rem;
@@ -5305,7 +5305,7 @@ tr.bundle:before {
   left: auto;
   background: none;
   box-shadow: none;
-  color: #414445;
+  color: @bg(1);
 }
 .jointsales .owl-prev {
   left: 0;
@@ -5330,15 +5330,15 @@ tr.bundle:before {
 }
 /* Modal */
 .modal__content::-webkit-scrollbar-thumb {
-  background: #414445;
+  background: @bg(1);
 }
 /* Floater */
 .floater__content::-webkit-scrollbar-thumb {
-  background: #414445;
+  background: @bg(1);
 }
 /* Termos de Aceite */
 .terms__content::-webkit-scrollbar-thumb {
-  background: #414445;
+  background: @bg(1);
 }
 /* Loader - Rolagem Infinita */
 .ias-trigger {
@@ -5356,20 +5356,20 @@ tr.bundle:before {
   align-items: center;
 }
 .cart__links .btn-checkout {
-  background: #ca213e;
-  color: #fff;
+  background: @button(bg);
+  color: @button(color);
 }
 .cart__links .btn-checkout:hover {
-  background: #900;
-  color: #fff;
+  background: @button(bg:hover);
+  color: @button(color:hover);
 }
 .cart-table header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 2.75rem;
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
   text-transform: uppercase;
 }
 .cart-table .th {
@@ -5433,7 +5433,7 @@ tr.bundle:before {
   color: #111;
 }
 .cart-table h2.name a:hover {
-  color: #414445;
+  color: @bg(1);
 }
 .cart-table .sku {
   display: block;
@@ -5477,9 +5477,9 @@ tr.bundle:before {
   margin-left: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  background: #414445;
+  background: @bg(1);
   box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2);
-  color: #fff;
+  color: @color(1);
   font-size: 0.8rem;
   cursor: pointer;
 }
@@ -5493,8 +5493,8 @@ tr.bundle:before {
   font-weight: 700;
 }
 .cart-table .giftwrap_button:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
 }
 .cart__boxes {
   display: flex;
@@ -5599,8 +5599,8 @@ tr.bundle:before {
 .msg-free_shipping {
   margin: 0.25rem 0;
   padding: 1rem;
-  background: #ccc;
-  color: #fff;
+  background: @bg(3);
+  color: @color(3);
   text-align: center;
 }
 /* Carrinho - Vendas Cruzadas */
@@ -5636,8 +5636,8 @@ table thead th,
 table thead td {
   padding: 0.5rem 1rem;
   border: 0;
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
   text-transform: uppercase;
   font-weight: 400;
   font-size: 0.8rem;
@@ -5679,11 +5679,11 @@ table dl.item-options .price {
   font-weight: 600;
 }
 table dl.item-options a {
-  color: #000;
+  color: @bg(2);
   text-decoration: underline;
 }
 table dl.item-options a:hover {
-  color: #333;
+  color: @bg(2:hover);
 }
 table tfoot th,
 table tfoot td {
@@ -5710,11 +5710,11 @@ table tbody .bundle.child td div {
   display: inline;
 }
 table a {
-  color: #000;
+  color: @bg(2);
   font-weight: 600;
 }
 table a:hover {
-  color: #333;
+  color: @bg(2:hover);
 }
 table .price-box {
   margin: 0;
@@ -5758,11 +5758,11 @@ table .price-box {
   display: block;
 }
 .success-content .order-number .number {
-  color: #ca213e;
+  color: @button(bg);
   font-size: 3rem;
 }
 .success-content .order-number a.number:hover {
-  color: #900;
+  color: @button(bg:hover);
 }
 .success-content .confirmation,
 .success-content .print {
@@ -5801,7 +5801,7 @@ table .price-box {
 }
 .success-content .print a {
   margin: 0 0.5rem;
-  color: #000;
+  color: @bg(1:hover);
   font-weight: 600;
 }
 .success-content .print a:hover {
@@ -5814,9 +5814,9 @@ table .price-box {
   height: 2.75em;
   border: 0;
   border-radius: 3px;
-  background: #414445;
+  background: @bg(1);
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
-  color: #fff;
+  color: @color(1);
   font-size: 1rem;
   line-height: 2.75em;
   cursor: pointer;
@@ -5835,8 +5835,8 @@ table .price-box {
   margin-right: 1rem;
 }
 .success-content .pagto a:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
 }
 .success-content .pagto a:active {
   padding-top: 0.25rem;
@@ -5849,16 +5849,16 @@ table .price-box {
 }
 .buttons-success .my-order {
   margin-left: 2rem;
-  background: #ca213e;
-  color: #fff;
+  background: @button(bg);
+  color: @button(color);
 }
 .buttons-success .my-order:hover {
-  background: #900;
-  color: #fff;
+  background: @button(bg:hover);
+  color: @button(color:hover);
 }
 .title-retorno-mp {
   margin-bottom: 0.94rem;
-  color: #000;
+  color: @bg(2);
   font-weight: 600;
   font-size: 1.13rem;
 }
@@ -5875,7 +5875,7 @@ table .price-box {
   color: #ed1c24;
 }
 .dados-retorno-mp .general strong {
-  color: #000;
+  color: @bg(2);
 }
 .checkout-onepage-success .col-main a[href*='ebitempresa'] {
   display: block;
@@ -5939,7 +5939,7 @@ table .price-box {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   margin-right: 0.5rem;
-  color: #414445;
+  color: @bg(1);
 }
 .accountlogin__new .btn {
   width: 100%;
@@ -6003,12 +6003,12 @@ table .price-box {
 .account-create .buttons-set .button {
   display: block;
   margin-left: auto;
-  background: #ca213e;
-  color: #fff;
+  background: @button(bg);
+  color: @button(color);
 }
 .account-create .buttons-set .button:hover {
-  background: #900;
-  color: #fff;
+  background: @button(bg:hover);
+  color: @button(color:hover);
 }
 .account-create .form-list .fields > * {
   min-width: 220px;
@@ -6020,7 +6020,7 @@ table .price-box {
   opacity: 0.5;
 }
 .form-list .fields.tipopessoa label.on {
-  color: #414445;
+  color: @bg(1);
   opacity: 1;
 }
 /* Painel do Cliente */
@@ -6033,7 +6033,7 @@ table .price-box {
 }
 .my-account form h2.legend {
   margin-bottom: 1rem;
-  color: #000;
+  color: @bg(2);
   font-weight: 600;
   font-size: 1.2rem;
 }
@@ -6050,7 +6050,7 @@ table .price-box {
   margin: 0 1rem;
   height: 6rem;
   border-radius: 100%;
-  box-shadow: 0 0 0 5px #fff, 0 0 0 6px #000;
+  box-shadow: 0 0 0 5px #fff, 0 0 0 6px @bg(1:hover);
 }
 .welcome-msg .picture img {
   display: block;
@@ -6059,7 +6059,7 @@ table .price-box {
 }
 .welcome-msg .hello {
   margin-bottom: 1rem;
-  color: #000;
+  color: @bg(1:hover);
   font-size: 1.2rem;
 }
 .dashboard .box-account {
@@ -6071,14 +6071,14 @@ table .price-box {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  color: #000;
+  color: @bg(2);
 }
 .box-account .box-head:before,
 .box-account .box-title:before {
   display: block;
   flex: 1 1 auto;
   margin-left: 1rem;
-  border-top: 1px solid #000;
+  border-top: 1px solid @bg(2);
   content: '';
 }
 .box-account .box-head h2,
@@ -6160,8 +6160,8 @@ table .price-box {
   display: block;
   padding: 0 0.5rem;
   border-radius: 3px;
-  background: #333;
-  color: #fff;
+  background: @bg(2:hover);
+  color: @color(1:hover);
   line-height: 2rem;
 }
 .my-account .pager ol li a {
@@ -6191,7 +6191,7 @@ table .price-box {
   speak: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: #000;
+  color: @bg(2);
 }
 .my-account .pager ol li a.previous:before {
   display: inline;
@@ -6234,15 +6234,15 @@ table .price-box {
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
 }
 .my-orders article.state-complete {
-  box-shadow: inset 0 0 0 1px #ca213e;
+  box-shadow: inset 0 0 0 1px @button(bg);
 }
 .my-orders .last-order article:before {
   display: block;
   margin-bottom: 1rem;
   padding: 0 1rem;
   border-radius: 3px;
-  background: #ccc;
-  color: #fff;
+  background: @bg(3);
+  color: @color(3);
   content: 'Último pedido';
   font-size: 0.7rem;
   line-height: 1rem;
@@ -6259,7 +6259,7 @@ table .price-box {
   font-size: 1rem;
 }
 .my-orders .order-num .num {
-  color: #000;
+  color: @bg(2);
   font-weight: 700;
 }
 .my-orders main {
@@ -6290,7 +6290,7 @@ table .price-box {
   transform: scale(0);
 }
 .my-orders .order-open:hover {
-  box-shadow: inset 0 0 0 1px #414445;
+  box-shadow: inset 0 0 0 1px @bg(1);
 }
 .my-orders .order-open:hover span {
   opacity: 1;
@@ -6431,7 +6431,7 @@ table .price-box {
 }
 .affiliateplus-opc .step-title:hover {
   background: rgba(0,0,0,0.02);
-  color: #414445;
+  color: @bg(1);
 }
 .affiliateplus-opc .a-item {
   margin-bottom: 1.25rem;
@@ -6501,7 +6501,7 @@ table .price-box {
 .order-status.state-new strong,
 .order-status.state-pending_payment strong,
 .order-status.state-payment_review strong {
-  color: #414445;
+  color: @bg(1);
 }
 .order-status.state-new:after,
 .order-status.state-pending_payment:after,
@@ -6517,7 +6517,7 @@ table .price-box {
 }
 /* Painel do Cliente - Status PROCESSING */
 .order-status.state-processing strong {
-  color: #000;
+  color: @bg(1:hover);
 }
 .order-status.state-processing:after {
   -webkit-animation-name: os-processing-bar;
@@ -6529,7 +6529,7 @@ table .price-box {
 }
 /* Painel do Cliente - Status COMPLETE */
 .order-status.state-complete strong {
-  color: #ca213e;
+  color: @button(bg);
 }
 .order-status.state-complete:after {
   -webkit-animation-name: os-complete-bar;
@@ -6541,7 +6541,7 @@ table .price-box {
 }
 .order-status.state-complete span:after {
   padding-left: 0.25rem;
-  color: #ca213e;
+  color: @button(bg);
   font-size: 1rem;
   content: '\f00c';
   text-transform: none;
@@ -6608,7 +6608,7 @@ table .price-box {
 .addresses-list h2 {
   display: block;
   margin-bottom: 1rem;
-  color: #000;
+  color: @bg(2);
   font-weight: 600;
   font-size: 1.2rem;
 }
@@ -6619,7 +6619,7 @@ table .price-box {
   background: #fff;
 }
 .addresses-primary h2 {
-  color: #ca213e;
+  color: @button(bg);
 }
 .addresses-primary ol li {
   margin-bottom: 1rem;
@@ -6639,14 +6639,14 @@ table .price-box {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  color: #900;
+  color: @button(bg:hover);
   font-weight: 600;
 }
 .addresses-primary h3 .ico {
   margin-left: 1rem;
   width: 1rem;
   height: 1rem;
-  fill: #900;
+  fill: @button(bg:hover);
 }
 .addresses-additional ol li {
   display: flex;
@@ -6673,8 +6673,8 @@ table .price-box {
   margin: 0 0 0.5rem;
   padding: 0 0.5rem;
   border-radius: 3px;
-  box-shadow: inset 0 0 0 1px #000;
-  color: #000;
+  box-shadow: inset 0 0 0 1px @bg(2);
+  color: @bg(2);
   text-transform: uppercase;
   white-space: nowrap;
   font-weight: 600;
@@ -6683,8 +6683,8 @@ table .price-box {
   opacity: 0.7;
 }
 .addresses-additional a:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
 }
 .account-edit-form-list {
   padding: 1rem;
@@ -6739,8 +6739,8 @@ table .price-box {
   margin-right: 0.5rem;
   padding: 0 0.5rem;
   border-radius: 3px;
-  box-shadow: inset 0 0 0 1px #000;
-  color: #000;
+  box-shadow: inset 0 0 0 1px @bg(2);
+  color: @bg(2);
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.7rem;
@@ -6750,11 +6750,11 @@ table .price-box {
 .sales-order-view .title-buttons a:hover,
 .sales-order-shipment .title-buttons a:hover,
 .sales-order-invoice .title-buttons a:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
 }
 .order-date {
-  color: #ccc;
+  color: @bg(3);
   font-size: 1rem;
 }
 .order-date:before {
@@ -6788,9 +6788,9 @@ dl.order-info dt {
   opacity: 0.7;
 }
 #order-info-tabs li.current {
-  background: #414445;
-  box-shadow: inset 0 0 0 1px #414445;
-  color: #fff;
+  background: @bg(1);
+  box-shadow: inset 0 0 0 1px @bg(1);
+  color: @color(1);
   opacity: 1;
 }
 #order-info-tabs li.current:before {
@@ -6799,7 +6799,7 @@ dl.order-info dt {
   left: calc(50% - 0.31rem);
   display: block;
   border: 5px solid transparent;
-  border-top-color: #414445;
+  border-top-color: @bg(1);
   content: '';
 }
 #order-info-tabs a {
@@ -6826,7 +6826,7 @@ dl.order-info dt {
 }
 .order-info-box .box-title h2 {
   margin-bottom: 1rem;
-  color: #000;
+  color: @bg(2);
   font-weight: 600;
   font-size: 1.2rem;
 }
@@ -6834,11 +6834,11 @@ dl.order-info dt {
   margin-left: 1rem;
   width: 1rem;
   height: 1rem;
-  fill: #900;
+  fill: @button(bg:hover);
 }
 .order-info-box .shipping-address h2,
 .order-info-box .billing-address h2 {
-  color: #900;
+  color: @button(bg:hover);
 }
 .bankpayment_info {
   display: flex;
@@ -6866,9 +6866,9 @@ dl.order-info dt {
   height: 2.75em;
   border: 0;
   border-radius: 3px;
-  background: #ca213e;
+  background: @button(bg);
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
-  color: #fff;
+  color: @button(color);
   font-size: 1rem;
   line-height: 2.75em;
   cursor: pointer;
@@ -6891,8 +6891,8 @@ dl.order-info dt {
   vertical-align: middle;
 }
 .boleto-info a:hover {
-  background: #900;
-  color: #fff;
+  background: @button(bg:hover);
+  color: @button(color:hover);
 }
 .boleto-info a:active {
   padding-top: 0.25rem;
@@ -6920,8 +6920,8 @@ dl.order-info dt {
   display: inline-block;
   padding: 0 0.63rem;
   border-radius: 3px;
-  box-shadow: inset 0 0 0 1px #000;
-  color: #000;
+  box-shadow: inset 0 0 0 1px @bg(2);
+  color: @bg(2);
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.69rem;
@@ -6929,8 +6929,8 @@ dl.order-info dt {
   opacity: 0.7;
 }
 .order-items a:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
 }
 .order-items a.link-print:before {
   content: '\f02f';
@@ -6957,14 +6957,14 @@ dl.order-info dt {
   font-size: 1rem;
 }
 .order-items div.shipped {
-  color: #ca213e;
+  color: @button(bg);
 }
 .order-items *:not(.order-links) a[onclick*=track] {
   display: inline-block;
   padding: 0 1.25rem;
   height: 2.5rem;
-  box-shadow: inset 0 0 0 1px #ca213e;
-  color: #ca213e;
+  box-shadow: inset 0 0 0 1px @button(bg);
+  color: @button(bg);
   font-size: 1rem;
   line-height: 2.5rem;
   opacity: 1;
@@ -6976,15 +6976,15 @@ dl.order-info dt {
   margin-right: 0.44rem;
   height: 1.25rem;
   vertical-align: middle;
-  fill: #ca213e;
+  fill: @button(bg);
 }
 .order-items *:not(.order-links) a[onclick*=track]:hover {
-  background: #ca213e;
-  box-shadow: inset 0 0 0 1px #900;
-  color: #900;
+  background: @button(bg);
+  box-shadow: inset 0 0 0 1px @button(bg:hover);
+  color: @button(bg:hover);
 }
 .order-items *:not(.order-links) a[onclick*=track]:hover .ico {
-  fill: #ca213e;
+  fill: @button(bg);
 }
 table.tracking-table tbody th,
 table.tracking-table tbody td {
@@ -7030,7 +7030,7 @@ table.tracking-table tbody td {
 }
 .block-account .current a,
 .block-account a:hover {
-  color: #000;
+  color: @bg(2);
 }
 .my-wishlist .buttons-set {
   display: flex;
@@ -7076,13 +7076,13 @@ table.tracking-table tbody td {
 }
 .my-account .btn-add,
 .my-account .btn-cart {
-  background: #ca213e;
-  color: #fff;
+  background: @button(bg);
+  color: @button(color);
 }
 .my-account .btn-add:hover,
 .my-account .btn-cart:hover {
-  background: #900;
-  color: #fff;
+  background: @button(bg:hover);
+  color: @button(color:hover);
 }
 .my-account .btn-share:before {
   display: inline;
@@ -7272,8 +7272,8 @@ table.tracking-table tbody td {
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
 }
 .gift-event-nav-links a:hover {
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
 }
 .share-gift-list {
   display: flex;
@@ -7356,7 +7356,7 @@ table.tracking-table tbody td {
 #search_event_form button .ico {
   width: 1rem;
   height: 1rem;
-  fill: #fff;
+  fill: @color(2);
 }
 #search_event_form input {
   flex: 1 1 auto;
@@ -7386,7 +7386,7 @@ table.tracking-table tbody td {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   margin-right: 0.31rem;
-  color: #414445;
+  color: @bg(1);
 }
 .block-gift-list ol li {
   display: flex;
@@ -7416,7 +7416,7 @@ table.tracking-table tbody td {
 }
 /* Loader */
 .svg-loader .spinner {
-  stroke: #414445;
+  stroke: @bg(1);
 }
 /* Modal - Termos de Aceite */
 #term-box-warning .title {
@@ -7426,13 +7426,13 @@ table.tracking-table tbody td {
 #term-box-warning button {
   height: 2.5rem;
   border-radius: 3px;
-  background: #ccc;
-  color: #fff;
+  background: @bg(3);
+  color: @color(3);
   line-height: 2.25rem;
 }
 #term-box-warning button.yes {
-  background: #ca213e;
-  color: #fff;
+  background: @button(bg);
+  color: @button(color);
 }
 /* Pop-ups */
 body.page-popup {
@@ -7483,7 +7483,7 @@ body.page-popup {
   font-size: 1rem;
 }
 .blog-categories li.level0 > a:hover {
-  color: #414445;
+  color: @bg(1);
 }
 .blog-categories ul.level1 {
   position: relative;
@@ -7512,7 +7512,7 @@ body.page-popup {
   font-size: 0.88rem;
 }
 .blog-categories li.level1 > a:hover {
-  color: #000;
+  color: @bg(1:hover);
 }
 .blog-tags .list {
   display: flex;
@@ -7525,10 +7525,10 @@ body.page-popup {
   padding: 0.31rem;
 }
 .blog-tags .tag a {
-  color: #000;
+  color: @bg(2);
 }
 .blog-tags .tag a:hover {
-  color: #333;
+  color: @bg(2:hover);
 }
 .blog-tags .size-1 {
   font-size: 0.75rem;
@@ -7598,7 +7598,7 @@ body.page-popup {
   font-size: 1rem;
 }
 .menu-recent a:hover {
-  color: #000;
+  color: @bg(1:hover);
 }
 .posts-list .the-post {
   margin: 0 0 1rem;
@@ -7639,7 +7639,7 @@ body.page-popup {
   color: #222;
 }
 .the-post .the-title a:hover {
-  color: #000;
+  color: @bg(1:hover);
 }
 .the-post .the-date {
   margin: 0 0 0.63rem;
@@ -7648,12 +7648,12 @@ body.page-popup {
 }
 .the-post .blog-entry .ler {
   display: block;
-  color: #000;
+  color: @bg(1:hover);
   text-transform: lowercase;
   font-weight: 600;
 }
 .the-post .blog-entry .ler:hover {
-  color: #414445;
+  color: @bg(1);
 }
 .the-post footer {
   display: flex;
@@ -7767,8 +7767,8 @@ body.page-popup {
   white-space: nowrap;
 }
 .blogfeed_tags a:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
 }
 .posts-list .blogfeed_tags {
   display: none;
@@ -7798,8 +7798,8 @@ body.page-popup {
   white-space: nowrap;
 }
 .the-cats a:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
 }
 .single-post {
   margin-bottom: 1.25rem;
@@ -7864,7 +7864,7 @@ body.page-popup {
 }
 .coms-title {
   margin-bottom: 1.25rem;
-  color: #414445;
+  color: @bg(1);
   font-size: 1.13rem;
 }
 .no-coms {
@@ -7957,7 +7957,7 @@ body.page-popup {
 .plans-container .subscription-plan.selected {
   position: relative;
   z-index: 2;
-  border: 1px solid #414445;
+  border: 1px solid @bg(1);
 }
 .subscription-plan .plan-description {
   flex: 0 0 auto;
@@ -8165,7 +8165,7 @@ body.page-popup {
   speak: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: #414445;
+  color: @bg(1);
   font-size: 0.88rem;
   font-family: 'biz_icons';
 }
@@ -8192,14 +8192,14 @@ body.page-popup {
   border-radius: 0;
   background: none;
   box-shadow: none;
-  color: #414445;
+  color: @bg(1);
   text-align: center;
 }
 .header-miniquote > .item {
   padding: 0.63rem 0;
 }
 .cotacao .finalizar:hover {
-  background: #414445;
+  background: @bg(1);
   color: #fff;
 }
 #quotelist .btn-remove {
@@ -8229,7 +8229,7 @@ body.page-popup {
   max-width: 100%;
   width: 100%;
   height: auto;
-  border: 1px solid #414445;
+  border: 1px solid @bg(1);
   border-radius: 4px;
   background: #fff;
 }
@@ -8242,13 +8242,13 @@ body.page-popup {
   margin-bottom: 1rem;
   width: 2rem;
   height: 2rem;
-  fill: #414445;
+  fill: @bg(1);
 }
 .timer .title {
   flex: 1 1 100%;
   order: 0;
   min-width: 1px;
-  color: #414445;
+  color: @bg(1);
   text-align: center;
   text-transform: uppercase;
   font-size: 1rem;
@@ -8258,7 +8258,7 @@ body.page-popup {
   order: 2;
   padding: 0 0.5rem;
   width: auto;
-  color: #414445;
+  color: @bg(1);
   font-size: 2rem;
 }
 .timer .timer__days {
@@ -8266,20 +8266,20 @@ body.page-popup {
   flex: 0 0 auto;
   margin: 0 0.19rem 0.56rem 0;
   padding-right: 0.5rem;
-  color: #414445;
+  color: @bg(1);
   font-size: 2rem;
 }
 .timer .timer__days:after {
   position: absolute;
   right: 0;
   bottom: 0;
-  color: #414445;
+  color: @bg(1);
   content: ':';
   font-size: 2rem;
 }
 .timer .timer__label {
   top: 100%;
-  color: #414445;
+  color: @bg(1);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.56rem;
@@ -8287,13 +8287,13 @@ body.page-popup {
 .timer .timer__afterhours,
 .timer .timer__afterminutes {
   margin-bottom: 0.56rem;
-  color: #414445;
+  color: @bg(1);
 }
 .timer .timer__hours,
 .timer .timer__minutes,
 .timer .timer__seconds {
   margin-bottom: 0.56rem;
-  color: #414445 !important;
+  color: @bg(1) !important;
   font-weight: normal !important;
   opacity: 1;
 }
@@ -8347,7 +8347,7 @@ body.page-popup {
   left: 0;
   width: 2rem;
   height: 2rem;
-  color: #414445;
+  color: @bg(1);
   text-align: center;
   font-size: 2rem;
   line-height: 2rem;
@@ -8359,9 +8359,9 @@ label[for='allow_gift_messages'] {
   padding: 1rem 2rem;
   height: auto;
   border-radius: 3px;
-  background: #000;
+  background: @bg(2);
   box-shadow: inset 0 -4px 0 rgba(0,0,0,0.1);
-  color: #fff;
+  color: @color(2);
   line-height: 1em;
   cursor: pointer;
   transition: all 200ms ease-out;
@@ -8378,8 +8378,8 @@ label[for='allow_gift_messages_for_items'] {
   line-height: 1em;
 }
 label[for='allow_gift_messages']:hover {
-  background: #333;
-  color: #fff;
+  background: @bg(2:hover);
+  color: @color(1:hover);
 }
 .gift-messages-form {
   padding-top: 1.25rem;
@@ -8424,7 +8424,7 @@ label[for='allow_gift_messages']:hover {
   margin-bottom: 0;
 }
 .form-box li.item:hover {
-  box-shadow: inset 0 0 0 1px #414445;
+  box-shadow: inset 0 0 0 1px @bg(1);
 }
 .form-box li.item .number {
   display: none;
@@ -8480,11 +8480,11 @@ label[for='allow_gift_messages']:hover {
   -webkit-font-smoothing: antialiased;
   flex: 0 0 auto;
   margin-right: 1rem;
-  color: #414445;
+  color: @bg(1);
 }
 #change-product-content .quick-search input {
   flex: 1 1 auto;
-  border-color: #414445;
+  border-color: @bg(1);
 }
 .materials-exchange {
   display: flex;
@@ -8519,7 +8519,7 @@ label[for='allow_gift_messages']:hover {
   background: #fff;
 }
 .materials-exchange .found .case {
-  border: 3px solid #414445;
+  border: 3px solid @bg(1);
 }
 .materials-exchange .image {
   display: block;
@@ -8538,26 +8538,26 @@ label[for='allow_gift_messages']:hover {
 }
 .materials-exchange .price {
   margin-bottom: -0.5rem;
-  color: #414445;
+  color: @bg(1);
   font-weight: 600;
 }
 .materials-exchange .changed-product {
   margin: 0 -0.5rem -0.5rem 0;
   padding: 0.5rem;
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
   font-weight: 700;
   cursor: pointer;
 }
 .materials-exchange .changed-product:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
 }
 table .change-product-link {
   display: inline-block;
   padding: 0.5rem;
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -8578,15 +8578,15 @@ table .change-product-link:before {
   vertical-align: middle;
 }
 table .change-product-link:hover {
-  background: #333;
-  color: #fff;
+  background: @bg(2:hover);
+  color: @color(1:hover);
 }
 /* Fidelidade */
 .rewards__title {
   padding: 0.5rem;
   border-radius: 3px 3px 0 0;
-  background: #ccc;
-  color: #fff;
+  background: @bg(3);
+  color: @color(3);
   text-align: center;
   font-size: 0.8rem;
 }
@@ -8595,7 +8595,7 @@ table .change-product-link:hover {
   border: 1px solid #ccc;
   border-radius: 0 0 3px 3px;
   background: #fff;
-  color: #ccc;
+  color: @bg(3);
 }
 .rewards__points {
   display: flex;
@@ -8614,19 +8614,19 @@ table .change-product-link:hover {
   font-size: 1.4rem;
 }
 .totals__table .reward-row {
-  background: #ccc;
-  color: #fff;
+  background: @bg(3);
+  color: @color(3);
 }
 .totals__table .reward-row td {
   padding: 1rem;
-  color: #fff;
+  color: @color(3);
 }
 .totals__table .reward-row td:last-child {
   text-align: right;
   font-weight: 700;
 }
 .totals__table .reward-row a {
-  color: #fff;
+  color: @color(3);
   text-decoration: underline;
 }
 .rewards-cart {
@@ -8652,7 +8652,7 @@ table .change-product-link:hover {
 #quickview-loader .txt {
   display: block;
   padding-top: 0.31rem;
-  color: #414445;
+  color: @bg(1);
   text-align: center;
   font-weight: 600;
   font-size: 0.88rem;
@@ -8697,7 +8697,7 @@ table .change-product-link:hover {
   stroke: #fff;
 }
 .quickview-close:hover .ico {
-  stroke: #414445;
+  stroke: @bg(1);
 }
 .quick-view-img {
   flex: 0 0 400px;
@@ -8867,7 +8867,7 @@ table .change-product-link:hover {
   stroke: #fff;
 }
 .compare-close:hover .ico path {
-  stroke: #414445;
+  stroke: @bg(1);
 }
 /* Revendas */
 .revendas-index-main {
@@ -8886,7 +8886,7 @@ table .change-product-link:hover {
 .revendas-busca form .title {
   display: block;
   margin-bottom: 1.25rem;
-  color: #000;
+  color: @bg(2);
   font-weight: 600;
   font-size: 1.13rem;
 }
@@ -8926,8 +8926,8 @@ table .change-product-link:hover {
   z-index: 9999;
   padding: 0.31rem 0.94rem;
   border-radius: 5px;
-  background: #414445;
-  color: #fff;
+  background: @bg(1);
+  color: @color(1);
   content: 'Este estado não possui nenhuma revenda.';
   text-align: center;
   text-shadow: 0 1px 1px rgba(0,0,0,0.2);
@@ -8970,7 +8970,7 @@ table .change-product-link:hover {
   height: 1.63rem;
   transform: translate(-50%, -100%);
   transform-origin: center bottom;
-  fill: #000;
+  fill: @bg(2);
 }
 #listagem-mapa .tiptop {
   position: absolute;
@@ -9001,7 +9001,7 @@ table .change-product-link:hover {
 }
 #listagem-mapa .tiptop strong {
   display: block;
-  color: #414445;
+  color: @bg(1);
   font-size: 1rem;
 }
 .revendas-cep .input-box {
@@ -9039,7 +9039,7 @@ table .change-product-link:hover {
   display: block;
   width: 1.25rem;
   height: 1.25rem;
-  color: #414445;
+  color: @bg(1);
   text-align: center;
   font-size: 1.25rem;
   line-height: 1.25rem;
@@ -9141,23 +9141,23 @@ table .change-product-link:hover {
   -webkit-font-smoothing: antialiased;
 }
 .revendaslist .telmail a {
-  color: #000;
+  color: @bg(2);
 }
 .revendaslist .telmail a:hover {
-  color: #333;
+  color: @bg(2:hover);
 }
 .revendaslist .conheca {
   display: inline-block;
   margin-top: 0.63rem;
   padding: 0.31rem 0.63rem;
   border-radius: 3px;
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
   font-size: 0.75rem;
 }
 .revendaslist .conheca:hover {
-  background: #333;
-  color: #fff;
+  background: @bg(2:hover);
+  color: @color(1:hover);
 }
 .arevenda {
   display: flex;
@@ -9227,10 +9227,10 @@ table .change-product-link:hover {
   -webkit-font-smoothing: antialiased;
 }
 .arevenda .dados a {
-  color: #000;
+  color: @bg(2);
 }
 .arevenda .dados a:hover {
-  color: #333;
+  color: @bg(2:hover);
 }
 .arevenda .galeria-nav {
   margin: 0 0 1.25rem -1.25rem;
@@ -9358,7 +9358,7 @@ table .change-product-link:hover {
   font-size: 0;
 }
 .case-detail-content .bx-pager-item a.active {
-  background: #414445;
+  background: @bg(1);
 }
 .case-detail-content .bx-controls-direction a {
   position: absolute;
@@ -9402,7 +9402,7 @@ table .change-product-link:hover {
   -webkit-font-smoothing: antialiased;
 }
 .case-detail-content .bx-controls-direction a:hover {
-  color: #414445;
+  color: @bg(1);
 }
 .case-detail-content .nome {
   margin-bottom: 1.25rem;
@@ -9447,82 +9447,82 @@ table .change-product-link:hover {
   padding: 0 0.94rem;
   min-height: 40px;
   border-radius: 3px;
-  background: #ccc;
+  background: @bg(3);
   box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2);
-  color: #fff;
+  color: @color(3);
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.88rem;
 }
 #continuar-finalizar .actions a:hover {
-  background: #f7f7f7;
-  color: #fff;
+  background: @bg(3:hover);
+  color: @color(3:hover);
 }
 #continuar-finalizar .actions a.btn-cart {
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
 }
 #continuar-finalizar .actions a.btn-cart:hover {
-  background: #333;
-  color: #fff;
+  background: @bg(2:hover);
+  color: @color(1:hover);
 }
 #continuar-finalizar .actions a.btn-checkout {
-  background: #ca213e;
-  color: #fff;
+  background: @button(bg);
+  color: @button(color);
 }
 #continuar-finalizar .actions a.btn-checkout:hover {
-  background: #900;
-  color: #fff;
+  background: @button(bg:hover);
+  color: @button(color:hover);
 }
 /* Finalização */
 .opc-registered-users button,
 .opc .buttons-set button:not(.btn--outline) {
-  background: #ca213e;
-  color: #fff;
+  background: @button(bg);
+  color: @button(color);
 }
 .opc-registered-users button:hover,
 .opc .buttons-set button:not(.btn--outline):hover {
-  background: #900;
-  color: #fff;
+  background: @button(bg:hover);
+  color: @button(color:hover);
 }
 .opc .buttons-set a {
-  color: #000;
+  color: @bg(2);
 }
 .opc .buttons-set a:hover {
-  color: #333;
+  color: @bg(2:hover);
 }
 #checkout-step-login .hints li:before {
-  color: #000;
+  color: @bg(2);
 }
 .mycart-opc-totals .title {
-  color: #000;
+  color: @bg(2);
 }
 .mycart-opc-totals .price {
-  color: #000;
+  color: @bg(2);
 }
 .step-title {
-  color: #000;
+  color: @bg(1:hover);
 }
 .step-title .number,
 .allow.active .step-title .number {
-  background: #000;
-  color: #fff;
+  background: @bg(1:hover);
+  color: @color(1:hover);
 }
 .allow.active .step-title {
-  color: #000;
+  color: @bg(1:hover);
 }
 .allow .step-title {
-  color: #ca213e;
+  color: @button(bg);
 }
 .allow .step-title .number {
-  background: #ca213e;
+  background: @button(bg);
 }
 .allow .step-title .number:before {
-  color: #fff;
+  color: @button(color);
 }
 .step-title a {
-  color: #000;
+  color: @bg(2);
 }
 .step-title a:before {
   display: inline;
@@ -9537,21 +9537,21 @@ table .change-product-link:hover {
   -webkit-font-smoothing: antialiased;
 }
 .step-title a:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
 }
 /* Finalização - Envios */
 #checkout-shipping-method-load ul li label:hover {
-  box-shadow: 0 0 0 1px #414445;
+  box-shadow: 0 0 0 1px @bg(1);
 }
 #checkout-shipping-method-load ul li label:after {
-  color: #ca213e;
+  color: @button(bg);
 }
 #checkout-shipping-method-load ul li .price {
-  color: #000;
+  color: @bg(1:hover);
 }
 #checkout-payment-method-load > dt label:after {
-  color: #ca213e;
+  color: @button(bg);
   content: '\f00c';
   text-transform: none;
   font-weight: normal;
@@ -9564,83 +9564,83 @@ table .change-product-link:hover {
 }
 /* Finalização - Pagamento */
 #checkout-payment-method-load > dt label:hover {
-  color: #ca213e;
+  color: @button(bg);
 }
 #checkout-payment-method-load > dt.dt-selected label {
-  color: #ca213e;
+  color: @button(bg);
 }
 #opc-payment .valor-card .value {
-  color: #ca213e;
+  color: @button(bg);
 }
 /* Finalização - Pagamento - Cartão de CrÃƒÂ©dito */
 .cardGrid .cod a {
-  color: #000;
+  color: @bg(1:hover);
 }
 .mp-coupon .bts span {
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
 }
 /* Finalização - Pagamento - Boletos */
 .boletoGrid .boleto-discount,
 .boletoGrid .boleto-price {
-  color: #ca213e;
+  color: @button(bg);
 }
 /* Finalização - Pagamento - DepÃƒÂ³sitos */
 .banks-accounts dt a.on {
-  color: #ca213e;
+  color: @button(bg);
 }
 /* Finalização - MundiPagg * Boleto + Cartão */
 #payment_form_mundipagg_api_boletocartao .boleto-entry .input-box input {
-  color: #ca213e;
+  color: @button(bg);
 }
 /* Finalização - MundiPagg * Boleto + 2 Cartões */
 #payment_form_mundipagg_api_boletodoiscartoes .boleto-entry .input-box input {
-  color: #ca213e;
+  color: @button(bg);
 }
 #payment_form_mundipagg_api_boletodoiscartoes .valor-card input {
-  color: #ca213e;
+  color: @button(bg);
 }
 /* Finalização - MundiPagg * 2 Cartões */
 #payment_form_mundipagg_api_doiscartoes .valor-card input {
-  color: #ca213e;
+  color: @button(bg);
 }
 /* Finalização - Mercado Pago * Ticket */
 .mercadopago-coupon-action-apply,
 .mercadopago-coupon-action-remove {
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
 }
 /* Finalização - Modelo Accordion */
 .osc-accordion h3 {
-  color: #000;
+  color: @bg(2);
 }
 .osc-accordion .opc-block-progress dt.complete:after {
-  color: #ca213e;
+  color: @button(bg);
 }
 .osc-accordion .opc-block-progress .price {
-  color: #000;
+  color: @bg(2);
 }
 .osc-accordion .opc-block-progress .pay-link {
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
 }
 .osc-accordion .opc-block-progress .pay-link:hover {
-  background: #000 _hover;
-  color: #fff;
+  background: @bg(2) _hover;
+  color: @color(1:hover);
 }
 /* Finalização - Modelo Colunas (OSC) */
 .osc-onepage h3 {
-  color: #000;
+  color: @bg(2);
 }
 .osc-onepage #checkout-shipping-method-load ul li label:hover .label {
-  color: #ca213e;
+  color: @button(bg);
 }
 /* Finalização - Modelo Etapas */
 .osc-steps h3 {
-  color: #000;
+  color: @bg(2);
 }
 .osc-steps .opc-block-progress dt a {
-  color: #000;
+  color: @bg(2);
 }
 .osc-steps .opc-block-progress dt a:before {
   display: inline;
@@ -9655,26 +9655,26 @@ table .change-product-link:hover {
   -webkit-font-smoothing: antialiased;
 }
 .osc-steps .opc-block-progress dt a:hover {
-  background: #000;
-  color: #fff;
+  background: @bg(2);
+  color: @color(2);
 }
 .osc-steps .opc-block-progress dt.complete {
-  color: #ca213e;
+  color: @button(bg);
 }
 .osc-steps .opc-block-progress dt.complete:before {
-  background: #ca213e;
-  color: #fff;
+  background: @button(bg);
+  color: @button(color);
 }
 .osc-steps .opc-block-progress dt.complete:after {
-  background: #ca213e;
+  background: @button(bg);
 }
 .-bt-change {
-  background: #ccc;
-  color: #fff;
+  background: @bg(3);
+  color: @color(3);
 }
 .-bt-change:hover {
-  background: #f7f7f7;
-  color: #fff;
+  background: @bg(3:hover);
+  color: @color(3:hover);
 }
 /* end of custom content */
 /**
@@ -9740,7 +9740,7 @@ table .change-product-link:hover {
     display: none !important;
   }
   .mywish__header .ico {
-    fill: #414445 !important;
+    fill: @bg(1) !important;
   }
 }
 /* ------ Logo */
@@ -9854,7 +9854,7 @@ table .change-product-link:hover {
   }
   .categories--mobi .all-a--0 {
     padding: 0.875rem 1rem;
-    color: #fff;
+    color: @color(1);
     font-size: 1rem;
   }
   .categories--mobi .all-ul--1 {
@@ -9866,7 +9866,7 @@ table .change-product-link:hover {
   }
   .categories--mobi .all-a--1 {
     padding: 0.875rem 1rem;
-    color: #fff;
+    color: @color(1);
   }
   .categories--mobi .all-ul--2 {
     background: rgba(0,0,0,0.1);
@@ -9877,7 +9877,7 @@ table .change-product-link:hover {
   }
   .categories--mobi .all-a--2 {
     padding: 0.975rem 1rem;
-    color: #fff;
+    color: @color(1);
   }
   .categories--mobi .std {
     display: none;
@@ -9915,8 +9915,8 @@ table .change-product-link:hover {
     left: 0.09rem;
   }
   .categories__show:hover {
-    background: #414445;
-    color: #fff;
+    background: @bg(1);
+    color: @color(1);
   }
 }
 /* ~568px */
@@ -9951,7 +9951,7 @@ table .change-product-link:hover {
     max-width: none;
     width: 100vw;
     height: 100vh;
-    box-shadow: inset 0 1px 0 #414445, inset 0 0 0 1px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 0 @bg(1), inset 0 0 0 1px rgba(0,0,0,0.1);
     transition: 600ms cubic-bezier(0.23, 1, 0.32, 1);
     transform: translateX(-100%);
   }
@@ -10011,7 +10011,7 @@ table .change-product-link:hover {
     max-height: 100vh;
     width: 100vw;
     height: 100vh;
-    box-shadow: inset 0 1px 0 #414445, inset 0 0 0 1px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 0 @bg(1), inset 0 0 0 1px rgba(0,0,0,0.1);
     transition: 600ms cubic-bezier(0.23, 1, 0.32, 1);
     transform: translateX(-100%);
   }
@@ -10056,9 +10056,9 @@ table .change-product-link:hover {
     width: 4rem;
     height: 4rem;
     border-radius: 100%;
-    background: #414445;
+    background: @bg(1);
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.3);
-    color: #fff;
+    color: @color(1);
     font-weight: 400;
     font-size: 1rem;
     transition: 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -10091,7 +10091,7 @@ table .change-product-link:hover {
     max-height: 100vh;
     width: 100vw;
     height: 100vh;
-    background: #414445;
+    background: @bg(1);
     transition: 600ms cubic-bezier(0.23, 1, 0.32, 1);
     transform: translateY(100%);
   }
@@ -10131,7 +10131,7 @@ table .change-product-link:hover {
     margin: 0;
   }
   .filters__filter .a--0 {
-    color: #fff;
+    color: @color(1);
   }
   .filters__swatches .swatch {
     background: rgba(255,255,255,0.5);
@@ -10302,14 +10302,14 @@ table .change-product-link:hover {
     display: flex;
     align-items: center;
     margin: 0;
-    background: #414445;
+    background: @bg(1);
   }
   .header {
     flex: 1 1 auto;
   }
   .header-container .mywish__header a,
   .header-container .myaccount__header a {
-    background: #fff !important;
+    background: @color(1) !important;
     box-shadow: none;
   }
 }
@@ -10348,21 +10348,21 @@ table .change-product-link:hover {
     padding: 1rem 3.75rem 1rem 1rem;
     width: 100%;
     height: 3rem;
-    background: #414445;
+    background: @bg(1);
     box-shadow: none;
-    color: #fff;
+    color: @color(1);
   }
   .header .search.on .search__input::-webkit-input-placeholder {
-    color: #fff;
+    color: @color(1);
   }
   .header .search.on .search__input::-moz-placeholder {
-    color: #fff;
+    color: @color(1);
   }
   .header .search.on .search__input:-ms-input-placeholder {
-    color: #fff;
+    color: @color(1);
   }
   .header .search.on .search__input:-moz-placeholder {
-    color: #fff;
+    color: @color(1);
   }
   .header .search__hide {
     position: fixed;
@@ -10829,7 +10829,7 @@ table .change-product-link:hover {
     flex: 0 0 3rem;
   }
   .grouped__option.added:not(.out-of-stock):hover {
-    box-shadow: inset 0 0 0 1px #414445;
+    box-shadow: inset 0 0 0 1px @bg(1);
   }
 }
 /* ------ Carrinho */
@@ -10894,7 +10894,7 @@ table .change-product-link:hover {
     margin: 0 -1rem 2rem;
     padding: 0;
     width: auto;
-    background: #414445;
+    background: @bg(1);
     box-shadow: 0 1px 4px rgba(0,0,0,0.2);
   }
   .opc .header {
@@ -11099,9 +11099,9 @@ table .change-product-link:hover {
     width: 4rem;
     height: 4rem;
     border-radius: 100%;
-    background: #414445;
+    background: @bg(1);
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.3);
-    color: #fff;
+    color: @color(1);
     font-weight: 400;
     font-size: 1rem;
     transition: 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -11154,8 +11154,8 @@ table .change-product-link:hover {
   }
   .block-account .current a,
   .block-account a:hover {
-    background: #000;
-    color: #fff;
+    background: @bg(2);
+    color: @color(2);
   }
   .block-account ul li.last a:after {
     font-weight: 700;
@@ -11444,7 +11444,7 @@ table .change-product-link:hover {
   }
   100% {
     transform: scale(1);
-    fill: #414445;
+    fill: @bg(1);
   }
 }
 @keyframes os-new {
@@ -11453,7 +11453,7 @@ table .change-product-link:hover {
   }
   100% {
     transform: scale(1);
-    fill: #414445;
+    fill: @bg(1);
   }
 }
 @-webkit-keyframes os-new-bar {
@@ -11462,7 +11462,7 @@ table .change-product-link:hover {
   }
   100% {
     width: 33.333%;
-    background: #414445;
+    background: @bg(1);
   }
 }
 @keyframes os-new-bar {
@@ -11471,7 +11471,7 @@ table .change-product-link:hover {
   }
   100% {
     width: 33.333%;
-    background: #414445;
+    background: @bg(1);
   }
 }
 @-webkit-keyframes os-processing {
@@ -11480,7 +11480,7 @@ table .change-product-link:hover {
   }
   100% {
     transform: scale(1);
-    fill: #000;
+    fill: @bg(1:hover);
   }
 }
 @keyframes os-processing {
@@ -11489,7 +11489,7 @@ table .change-product-link:hover {
   }
   100% {
     transform: scale(1);
-    fill: #000;
+    fill: @bg(1:hover);
   }
 }
 @-webkit-keyframes os-processing-bar {
@@ -11498,7 +11498,7 @@ table .change-product-link:hover {
   }
   100% {
     width: 66.666%;
-    background: #000;
+    background: @bg(1:hover);
   }
 }
 @keyframes os-processing-bar {
@@ -11507,7 +11507,7 @@ table .change-product-link:hover {
   }
   100% {
     width: 66.666%;
-    background: #000;
+    background: @bg(1:hover);
   }
 }
 @-webkit-keyframes os-complete {
@@ -11516,7 +11516,7 @@ table .change-product-link:hover {
   }
   100% {
     transform: scale(1);
-    fill: #ca213e;
+    fill: @button(bg);
   }
 }
 @keyframes os-complete {
@@ -11525,7 +11525,7 @@ table .change-product-link:hover {
   }
   100% {
     transform: scale(1);
-    fill: #ca213e;
+    fill: @button(bg);
   }
 }
 @-webkit-keyframes os-complete-bar {
@@ -11534,7 +11534,7 @@ table .change-product-link:hover {
   }
   100% {
     width: 100%;
-    background: #ca213e;
+    background: @button(bg);
   }
 }
 @keyframes os-complete-bar {
@@ -11543,7 +11543,7 @@ table .change-product-link:hover {
   }
   100% {
     width: 100%;
-    background: #ca213e;
+    background: @button(bg);
   }
 }
 @-webkit-keyframes os-holded {
@@ -11674,7 +11674,7 @@ body,
   border-radius: 5px;
   background: #b9f606;
   box-shadow: none;
-  color: #000;
+  color: @bg(1:hover);
   text-transform: uppercase;
 }
 .messages .error-msg {
@@ -11765,7 +11765,7 @@ body,
 }
 .breadcrumb__item {
   margin-right: 0.63rem;
-  color: #414445;
+  color: @bg(1);
   font-weight: 400;
   font-size: 0.75rem;
 }
@@ -11787,11 +11787,11 @@ body,
 
 .categories__show {
   background: #fff;
-  color: #414445;
+  color: @bg(1);
 }
 .categories__show:hover {
   background: #fff;
-  color: #414445;
+  color: @bg(1);
 }
 @media (max-width: 992px) {
   .categories .parent {
@@ -11889,7 +11889,7 @@ body,
   .categories .a--0 {
     margin: 0 0 0.63rem;
     height: 1.88rem;
-    color: #333;
+    color: @bg(2:hover);
     font-weight: 500;
     font-size: 0.88rem;
   }
@@ -11899,7 +11899,7 @@ body,
   .categories .li--0:hover .a--0 {
     border-radius: 30px;
     background: #f2f3f6;
-    color: #414445;
+    color: @bg(1);
   }
   .categories .box--1 {
     padding: 1.88rem 0 0;
@@ -11913,7 +11913,7 @@ body,
   display: none;
 }
 .configurable__caption {
-  color: #414445;
+  color: @bg(1);
   font-weight: 400;
   font-size: 0.94rem;
 }
@@ -11976,7 +11976,7 @@ body,
   border: 0;
   background: none;
   box-shadow: none;
-  color: #414445;
+  color: @bg(1);
   text-transform: none;
   font-weight: 700;
   font-size: 1rem;
@@ -11999,7 +11999,7 @@ body,
   background: #fff;
 }
 .std .descriptions__bg {
-  background: url("/media/interface/images/product.jpg") repeat center center;
+  background: url("@img(product)") repeat center center;
 }
 .std .descriptions__white,
 .std .descriptions__bg {
@@ -12011,7 +12011,7 @@ body,
   align-items: center;
   margin: 0;
   padding: 0.94rem 0;
-  color: #414445;
+  color: @bg(1);
   text-transform: none;
   font-weight: 700;
   font-size: 1.63rem;
@@ -12025,7 +12025,7 @@ body,
   line-height: 1.88rem;
 }
 .std .descriptions__text {
-  color: #414445;
+  color: @bg(1);
   font-weight: 400;
   font-size: 1.13rem;
   line-height: 2.5rem;
@@ -12122,7 +12122,7 @@ body,
     height: 2.5rem;
     border-radius: 40px;
     background: #fff;
-    color: #000;
+    color: @bg(1:hover);
     text-transform: uppercase;
     font-weight: 500;
     font-size: 0.81rem;
@@ -12137,7 +12137,7 @@ body,
   }
   .filters__filter .a--0,
   .filters__filter .a--0 .count {
-    color: #414445;
+    color: @bg(1);
     font-weight: 400;
     font-size: 0.75rem;
   }
@@ -12190,7 +12190,7 @@ body,
     align-items: center;
   }
   .filters__list:before {
-    color: #414445;
+    color: @bg(1);
     content: 'Filtrar por';
     font-weight: 700;
     font-size: 0.81rem;
@@ -12198,11 +12198,11 @@ body,
 }
 
 .footer-container {
-  background: url("/media/interface/images/footer.jpg") repeat center center;
+  background: url("@img(footer)") repeat center center;
 }
 .footer__title {
   margin: 1.56rem 0;
-  color: #000;
+  color: @bg(1:hover);
   text-transform: none;
   font-weight: 700;
   font-size: 1rem;
@@ -12220,7 +12220,7 @@ body,
 .footer__row--copyright {
   padding: 1.25rem 0;
   background: #fff;
-  color: #000;
+  color: @bg(1:hover);
   text-align: center;
   font-weight: 400;
   font-size: 0.75rem;
@@ -12235,7 +12235,7 @@ body,
 }
 .footer__row--copyright .textblock {
   width: 100%;
-  color: #000;
+  color: @bg(1:hover);
   font-weight: 400;
   font-size: 0.75rem;
 }
@@ -12315,7 +12315,7 @@ body,
 }
 .frete__content:before {
   flex: 0 0 135px;
-  color: #000;
+  color: @bg(1:hover);
   content: 'Simulador de Frete:';
   font-weight: 500;
   font-size: 0.88rem;
@@ -12336,7 +12336,7 @@ body,
   font-size: 0;
 }
 .frete__form label.cep:before {
-  color: #000;
+  color: @bg(1:hover);
   content: 'Cep';
   font-weight: 500;
   font-size: 0.88rem;
@@ -12360,8 +12360,8 @@ body,
   height: 3.75rem;
   background: none;
   box-shadow: none;
-  color: #414445;
-  color: #414445;
+  color: @bg(1);
+  color: @bg(1);
   font-weight: 400;
   font-size: 1.25rem;
 }
@@ -12373,7 +12373,7 @@ body,
   top: 100%;
   right: 0;
   width: 100%;
-  color: #414445;
+  color: @bg(1);
   text-align: center;
   font-weight: 400;
   font-size: 0.75rem;
@@ -12465,7 +12465,7 @@ body,
   .loginout a {
     display: inline-block;
     padding: 0.94rem 1.88rem;
-    color: #000;
+    color: @bg(1:hover);
     font-size: 0.75rem;
   }
 }
@@ -12474,7 +12474,7 @@ body,
   margin: 0;
 }
 .header .logo a {
-  color: #000 !important;
+  color: @bg(1:hover) !important;
 }
 .header .logo img,
 .header .logo svg {
@@ -12512,7 +12512,7 @@ body,
   height: 100%;
 }
 .mycart__header a:hover {
-  color: #414445;
+  color: @bg(1);
 }
 .mycart__header .qtd {
   position: absolute;
@@ -12529,7 +12529,7 @@ body,
 }
 .mycart:hover .mycart__header {
   background: #fff;
-  color: #414445;
+  color: @bg(1);
 }
 .mycart:hover .mycart__content {
   display: none !important;
@@ -12555,7 +12555,7 @@ body,
 }
 @media (min-width: 993px) {
   .footer .mymenu .a--0:hover {
-    color: #000;
+    color: @bg(1:hover);
   }
 }
 
@@ -12568,7 +12568,7 @@ body,
 .newsletter__text {
   display: flex;
   align-items: center;
-  color: #414445;
+  color: @bg(1);
   font-weight: 700;
   font-size: 0.88rem;
 }
@@ -12643,7 +12643,7 @@ body,
   display: none;
 }
 .options__caption {
-  color: #414445;
+  color: @bg(1);
   font-weight: 400;
   font-size: 0.94rem;
   opacity: 1;
@@ -12674,7 +12674,7 @@ body,
 }
 .options-list .label .price-notice {
   margin-left: 0.63rem;
-  color: #414445;
+  color: @bg(1);
 }
 .options-list .label .price {
   margin-left: 0.19rem;
@@ -12723,7 +12723,7 @@ body,
 .products .price-box .regular-price .price span,
 .products .price-box .special-price .price span,
 .products .price-box .minimal-price .price span {
-  color: #414445;
+  color: @bg(1);
   font-weight: 400;
   font-size: 1rem;
 }
@@ -12749,7 +12749,7 @@ body,
 .products__name {
   display: block;
   margin-bottom: 0.94rem;
-  color: #414445;
+  color: @bg(1);
   font-weight: 700;
   font-size: 0.88rem;
 }
@@ -12805,7 +12805,7 @@ body,
   border: 0 !important;
   background: none;
   box-shadow: none;
-  color: #414445;
+  color: @bg(1);
   font-weight: 400;
   font-size: 1.25rem;
 }
@@ -12860,7 +12860,7 @@ body,
   justify-content: flex-start;
   align-items: center;
   min-height: 40px;
-  color: #414445;
+  color: @bg(1);
   font-weight: 400;
   font-size: 0.88rem;
   line-height: 1.3;
@@ -12880,7 +12880,7 @@ body,
 
 .search__button {
   background: #fff;
-  color: #414445;
+  color: @bg(1);
 }
 .search__button .ico {
   width: 0.88rem;
@@ -12888,7 +12888,7 @@ body,
 }
 .search__button:hover {
   background: #fff;
-  color: #414445;
+  color: @bg(1);
 }
 @media (max-width: 568px) {
   .header .search.on .search__input {
@@ -12906,19 +12906,19 @@ body,
     font-size: 0.75rem;
   }
   input.search__input::-webkit-input-placeholder {
-    color: #333;
+    color: @bg(2:hover);
   }
   input.search__input::-moz-placeholder {
-    color: #333;
+    color: @bg(2:hover);
   }
   input.search__input:-ms-input-placeholder {
-    color: #333;
+    color: @bg(2:hover);
   }
   input.search__input::-ms-input-placeholder {
-    color: #333;
+    color: @bg(2:hover);
   }
   input.search__input::placeholder {
-    color: #333;
+    color: @bg(2:hover);
   }
   input.search__input:focus::-webkit-input-placeholder {
     color: transparent;
@@ -12964,7 +12964,7 @@ body,
   height: 3.13rem;
   border: solid 1px #f1f3f6;
   border-radius: 5px;
-  color: #000;
+  color: @bg(1:hover);
   content: 'Compartilhar';
   font-weight: 500;
   font-size: 0.88rem;
@@ -13046,7 +13046,7 @@ body,
   font-size: 0;
 }
 .cart__boxes .shipping__postcode label:before {
-  color: #414445;
+  color: @bg(1);
   content: 'Cep';
   font-weight: 500;
   font-size: 0.88rem;
@@ -13056,7 +13056,7 @@ body,
   border: 0;
   background: none;
   box-shadow: none;
-  color: #414445;
+  color: @bg(1);
   text-transform: none;
   font-weight: 700;
   font-size: 1rem;
@@ -13119,7 +13119,7 @@ body,
 }
 .toolbar .sorter:before {
   min-width: 105px;
-  color: #414445;
+  color: @bg(1);
   content: 'Ordenar por';
   text-transform: uppercase;
   font-weight: 500;
@@ -13159,7 +13159,7 @@ body,
   border: 0;
   background: none;
   box-shadow: none;
-  color: #414445;
+  color: @bg(1);
   text-transform: uppercase;
   font-size: 0.69rem;
   -webkit-appearance: none;
@@ -13186,14 +13186,14 @@ body,
 }
 .cart-table header {
   border-radius: 5px;
-  background: #000;
+  background: @bg(1:hover);
   text-transform: none;
 }
 .cart-table main {
   border: 0;
 }
 .cart-table h2.name a {
-  color: #000;
+  color: @bg(1:hover);
   text-transform: none;
   font-weight: 700;
   font-size: 0.75rem;
@@ -13226,7 +13226,7 @@ body,
   display: none;
 }
 .totals__table .a-right:first-child {
-  color: #414445;
+  color: @bg(1);
   font-weight: 500;
   font-size: 0.88rem;
 }
@@ -13234,7 +13234,7 @@ body,
   padding-top: 1.19rem;
   padding-bottom: 1.19rem;
   border-radius: 5px 0 0 5px;
-  background: #000;
+  background: @bg(1:hover);
   color: #bcbcc5;
   font-weight: 500;
   font-size: 0.88rem;
@@ -13248,7 +13248,7 @@ body,
 }
 .totals__table tfoot .a-right:last-child {
   border-radius: 0 5px 5px 0;
-  background: #000;
+  background: @bg(1:hover);
   color: #b7e529;
   font-weight: 700;
   font-size: 1.13rem;
@@ -13271,7 +13271,7 @@ body,
   border-radius: 5px;
   background: #beff01;
   box-shadow: none;
-  color: #000;
+  color: @bg(1:hover);
   text-transform: none;
   font-weight: 700;
   font-size: 1rem;
@@ -13522,7 +13522,7 @@ body,
   border-radius: 4px;
   background: #b7e529;
   box-shadow: none;
-  color: #000;
+  color: @bg(1:hover);
   text-transform: none;
   font-weight: 700;
   font-size: 1.13rem;
