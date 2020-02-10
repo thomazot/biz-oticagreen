@@ -17,9 +17,10 @@
         @if(is_disponivel)
             <div class="prod__prices">
                 @preco
-            
-                @bt(comprar)
-                @links
+                <div class="prod__buys">
+                    @bt(comprar)
+                    @links
+                </div>
             </div>
         
             @simulador-frete

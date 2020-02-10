@@ -1,3 +1,29 @@
 .breadcrumb
+    background: #f2f4f7
+
+    &__list
+        @extend $container
+
+        padding: 11px 0
+
+    &__item
+        margin-right: 10px
+        color: color1_bg
+        font-weight: regular
+        font-size: 12px
+
+    &__last
+        font-weight: bold
+
+    &__sep
+        display: none
+
+    &__home
+        .breadcrumb__link:before
+            display: none
+
     .catalog-category-view &
         display: none
+
+    .catalog-product-view &
+        margin-top: -16px

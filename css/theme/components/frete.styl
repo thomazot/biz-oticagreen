@@ -1,0 +1,87 @@
+.frete
+    margin-bottom: 50px
+
+    &__title
+        display: none
+
+    &__content
+        position: relative
+        display: block
+
+        &:before
+            flex: 0 0 135px
+            color: color1_bg_hover
+            content: 'Simulador de Frete:'
+            font-weight: medium
+            font-size: 14px
+
+    &__form
+        border-radius: 5px
+        background: #f1f3f6
+
+        label
+            display: flex
+            align-items: center
+            height: 60px
+            background: none
+            box-shadow: none
+            text-transform: none
+
+            &.cep
+                font-size: 0
+
+                &:before
+                    color: color1_bg_hover
+                    content: 'Cep'
+                    font-weight: medium
+                    font-size: 14px
+
+            .ico
+                display: none
+
+        .input-box
+            flex: 1
+            min-width: 0
+
+        .input-text
+            display: block
+            height: 60px
+            border: 0
+            border: 0
+            background: none
+            box-shadow: none
+
+    &__actions
+        .btn
+            height: 60px
+            background: none
+            box-shadow: none
+            color: color1_bg
+            color: color1_bg
+            font-weight: regular
+            font-size: 20px
+
+            &:hover
+                background: none
+
+    &__naosei
+        position: absolute
+        top: 100%
+        right: 0
+        width: 100%
+        color: color1_bg
+        text-align: center
+        font-weight: regular
+        font-size: 12px
+
+    @media (min-width: 569px)
+        &__form
+            flex: 1
+            min-width: 0
+
+        &__content
+            display: flex
+            align-items: center
+
+        &__naosei
+            width: calc(100% - 135px)

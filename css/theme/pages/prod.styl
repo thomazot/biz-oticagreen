@@ -1,5 +1,6 @@
 .catalog-product-view
     .main
+        max-width: 100%
         width: 100%
 
     .col-main
@@ -7,3 +8,204 @@
 
     .product-essential
         @extend $container
+
+.product-image-gallery
+    box-shadow: none
+
+.product-image-container
+    display: contents
+
+.more-views
+    height: 36px
+
+#product_addtocart_form
+    align-items: flex-start
+
+.product-image-thumbs
+    justify-content: center
+    margin: 10px 0
+
+    img, .video
+        display: none
+
+    li
+        display: block
+        flex: 0 0 auto
+        margin: 0 4px
+        padding: 0
+        min-width: 0
+        min-height: 0
+
+    .thumb-link
+        position: relative
+        overflow: visible
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        background: #e3e7ee
+
+        &:before
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            border: solid 2px #fff
+            border-radius: 50%
+            box-shadow: 0 0 0 1px #e3e7ee
+            content: ''
+            opacity: 0
+
+        &.on
+            box-shadow: none
+
+            &:before
+                opacity: 1
+
+.prod
+    &__img
+        display: flex
+        flex-flow: row wrap
+        align-items: flex-start
+
+        .product-image
+            flex: 0 0 100%
+            order: 1
+
+        .more-views
+            flex: 0 0 100%
+            order: 2
+
+        .sharing-links
+            flex: 0 0 100%
+            order: 3
+            min-width: 0
+
+        @media (min-width: 569px)
+            align-items: center
+
+            .more-views
+                flex: 1
+                order: 3
+                min-width: 0
+
+            .sharing-links
+                flex: 0 1 145px
+                order: 2
+
+    &__name
+        margin-bottom: 15px
+
+        h1
+            margin-bottom: 0
+            text-transform: none
+            font-size: 24px
+            line-height: 1.3
+
+        .sku
+            color: #444441
+            text-transform: uppercase
+            font-weight: regular
+            font-size: 13px
+
+    &__prices
+        margin-bottom: 30px
+
+        .price-box
+            margin-right: 15px
+
+        .regular-price, .special-price, .minimal-price
+            .label
+                display: none
+
+            .price span
+                color: #a8d421
+                font-weight: bold
+                font-size: 22px
+
+                &:before
+                    display: block
+                    color: #a9a9a9
+                    content: 'Valor Total'
+                    font-weight: medium
+                    font-size: 15px
+
+    &__buys
+        flex: 1
+        min-width: 0
+
+    &__shop
+        .add-to-cart
+            flex: 1
+            margin-bottom: 0
+            min-width: 0
+
+        .add-to-cart-buttons
+            display: flex
+
+        .add-to-cart-btn
+            flex: 1
+            margin-left: 7px
+            padding: 0
+            min-width: 0
+            height: 60px
+            border-radius: 4px
+            background: #b7e529
+            box-shadow: none
+            color: color1_bg_hover
+            text-transform: none
+            font-weight: bold
+            font-size: 18px
+
+    &__buys
+        display: flex
+
+.add-to-links
+    flex: 0 0 45px
+    width: 45px
+
+    li.link-wishlist
+        padding-top: 0
+
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0
+            width: 45px
+            height: 60px
+            box-shadow: none
+
+            span
+                display: none
+
+            &:before
+                icon('\f004')
+
+                color: #fff
+                text-shadow: 3px 0 0 #b7e529, -3px 0 0 #b7e529, 0 3px 0 #b7e529, 0 -3px 0 #b7e529
+                font-size: 20px
+
+@media (min-width: 569px)
+    .prod
+        &__prices
+            display: flex
+
+@media (max-width: 992px)
+    #product_addtocart_form
+        flex-wrap: wrap
+
+    .prod__img
+        flex: 0 0 100%
+        margin-right: 0
+        margin-bottom: 20px
+        min-width: 0
+
+@media (min-width: 993px)
+    .prod
+        &__img
+            flex: 1
+            min-width: 0
+
+        &__shop
+            flex: 0 1 405px

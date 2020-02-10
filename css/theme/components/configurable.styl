@@ -1,0 +1,41 @@
+.configurable
+    &:before
+        display: none
+
+    &__caption
+        color: color1_bg
+        font-weight: regular
+        font-size: 15px
+
+    .configurable-swatch-list
+        img
+            width: 16px
+            height: 16px
+            border-radius: 50%
+
+        a.has-image
+            position: relative
+            min-width: 0
+            box-shadow: none
+            line-height: 1
+
+            &:before
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                border: solid 1px #d7d8db
+                border-radius: 50%
+                box-shadow: inset 0 0 0 2px #fff
+                content: ''
+                opacity: 0
+
+            &:hover:before
+                opacity: 1
+
+            &:hover
+                background: none
+
+        .selected a.has-image:before
+            opacity: 1
