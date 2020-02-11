@@ -1,4 +1,21 @@
 .products
+    .add-to-cart
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        width: 192px
+        height: 40px
+        background: #b7e529
+        box-shadow: none
+        color: color1_bg_hover
+        text-transform: none
+        font-weight: bold
+        font-size: 14px
+
+        &:hover
+            background: darken(#b7e529, 10%)
+
     &__header
         img
             width: 260px
@@ -20,6 +37,9 @@
         color: color1_bg
         font-weight: bold
         font-size: 14px
+
+    .owl-carousel &__item
+        border-bottom: 0
 
     .configurable-swatch-list
         justify-content: center
@@ -52,4 +72,19 @@
                 box-shadow: none
 
                 &:before
+                    opacity: 1
+
+    @media (min-width: 993px)
+        &__actions
+            opacity: 0
+            transition: all .2s ease
+
+        &__case
+            padding: 20px 0
+            border-radius: 4px
+
+            &:hover
+                box-shadow: inset 0 0 0 1px #e3e7ee
+
+                .products__actions
                     opacity: 1

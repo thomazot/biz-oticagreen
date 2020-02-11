@@ -1,12 +1,23 @@
 .options
+    margin-bottom: 0
+
+    &__option
+        &:last-child
+            padding-bottom: 0
+
     &:before
         display: none
 
     &__caption
+        display: flex
+        justify-content: space-between
         color: color1_bg
         font-weight: regular
         font-size: 15px
         opacity: 1
+
+        a
+            width: 160px
 
     select
         padding: 0 40px 0 20px
@@ -64,4 +75,5 @@
                 &:before
                     icon('\f00c')
 
+                    padding-top: 2px
                     border-color: #9cc61d

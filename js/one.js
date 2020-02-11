@@ -903,8 +903,6 @@ function default_carrossel_produtos() {
                         [0, 1],
                         [568, 2],
                         [768, 3],
-                        [1024, 4],
-                        [1270, 5],
                     ],
                     beforeMove: function() {
                         if (typeof $j.fn.lazyload != 'undefined') {
@@ -1445,6 +1443,28 @@ $j(document)
 
         if (categoryImage.length) {
             $('.header-container').after(categoryImage)
+        }
+
+        var guiaLentes = $('#guia_de_lentes')
+        if (guiaLentes.length) {
+            var button = $(
+                '<a class="guia-de-lentes" href="#">Guia de Lentes</a>'
+            )
+
+            $('.options__caption').each(function() {
+                if (
+                    $(this)
+                        .text()
+                        .indexOf('uma Lente') !== -1
+                ) {
+                    $(this).append(button)
+                }
+            })
+
+            button.click(function(event) {
+                event.preventDefault()
+                modal_open('guia_de_lentes')
+            })
         }
     })
     .on('resizeStop', function(e) {

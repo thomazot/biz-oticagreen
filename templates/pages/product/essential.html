@@ -11,6 +11,7 @@
         </div>
 
         @variacoes
+        @atributo(itens_inclusos)
         @bt(sobconsulta "Sob Consulta")
         @temporizador
         
@@ -32,3 +33,10 @@
 		@endif(is_disponivel)
 	</div>
 </div>
+
+@if(guia_de_lentes)
+<div id="guia_de_lentes">
+{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="26"}}
+</div>
+<script>modal('guia_de_lentes')</script>
+@endif(guia_de_lentes)
