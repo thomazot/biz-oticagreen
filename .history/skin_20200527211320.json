@@ -1,6 +1,6 @@
 {
-    "protocol": "https",
-    "host": "www.oticagreen.com.br",
+    "protocol": "http",
+    "host": "oticagreen.com.br",
     "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,
